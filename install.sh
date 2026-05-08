@@ -17,11 +17,11 @@ echo ""
 
 # python3-dbus installed
 if python3 -c "import dbus" 2>/dev/null; then
-    echo "  ✓ python3-dbus-python installed"
+    echo "  ✓ python3 dbus python installed"
 else
-    echo "  ✗ python3-dbus-python not found"
+    echo "  ✗ python3 dbus python not found"
     echo "    Install manual:"
-    echo "      sudo zypper install python3-dbus-python"
+    echo "      sudo zypper install python313-dbus-python"
     echo ""
     ERRORS=$((ERRORS + 1))
 fi
