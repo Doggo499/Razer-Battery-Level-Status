@@ -1,0 +1,1293 @@
+sudo [36msdbootutil[m [36mupdate-all-entries[m
+sudo [36mnano[m [36m/etc/kernel/cmdline[m
+su [36m-[m
+sudo [36mreboot[m
+reboot
+journalctl [36m-r[m
+journalctl [36m--help[m
+journalctl
+nvidia-smi
+htop
+sudo [36mdmesg[m [32m|[m grep [36mnvidia[m
+sudo [36mdmesg[m [32m|[m grep [36mTASK[m
+sudo [36mdmesg[m
+sudo [36mzypper[m [36mref[m
+groups
+systemctl [36m--user[m [36mstatus[m [36mopenrazer-daemon[m
+find [36m/sys[m [36m-name[m [33m"charge_level"[m [36;1m2>/dev/null[m
+ls [36m/sys/bus/hid/drivers/razermouse/[m
+cat [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0025/charge_status[m
+find [36m/sys/bus/hid/drivers/razermouse/[m [36m-name[m [33m"charge_level"[m [36m-o[m [36m-name[m [33m"charge_status"[m
+cat [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/charge_level[m
+cat [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/charge_status[m
+bash [36m-c[m [33m"echo TEST; ls /sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/; find /sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/ -maxdepth 1 -type f"[m
+find [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/[m [36m-name[m [36mcharge_level[m
+bash [36m-c[m [33m"LEVEL_FILE=[96m$([mfind [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/[m [36m-name[m [36mcharge_level[96m)[33m; echo [96m\"[33mFOUND: [96m$LEVEL_FILE\"[33m; cat [96m\"$LEVEL_FILE\"[33m"[m
+find [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/[m [36m-name[m [33m'charge_level'[m [36;1m2>/dev/null[m
+find [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013/[m [36m-name[m [33m'charge_lev1el'[m [36;1m2>/dev/null[m
+find [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013[m [36m-name[m [36mcharge_level[m
+find [36m/sys/bus/hid/drivers/razermouse/0003:1532:007B.0013[m [36m-name[m [33m'charge_level'[m
+openrazer-daemon [36m--help[m
+find [36m/sys/bus/hid/drivers/razermouse/[m [36m-name[m [36mcharge_level[m
+find [36m/sys/bus/hid/drivers/razermouse/[m [36m-name[m [33m'charge_level'[m
+plasmashell [36m--replace[m [32m&[m
+nano [36m/home/gddrx/.local/share/plasma/plasmoids/org.kde.plasma.razerviperul/contents/ui/main.qml[m
+cat [36m/sys/bus/hid/drivers/razermouse/0003:1532:007A.0006/charge_level[m
+./install.sh
+journalctl [36m--user[m [36m-xeu[m [36mopenrazer-daemon.service[m
+systemctl [36m--user[m [36menable[m [36m--now[m [36mopenrazer-daemon[m
+chmod [36m+x[m [36minstall.sh[m
+ls
+cd [36mrazer-battery-plasmoid/[m
+cd [36mdownloads/[m
+cd [96m~[36m/[m
+c [36md~/[m
+cat [36m/etc/os-release[m [32m|[m grep [36mVERSION[m
+python3 [36m-c[m [33m"import dbus; print('OK')"[m
+sudo [36mzypper[m [36minstall[m [36mpython3-dbus-python[m
+opi [36mpython3-dbus[m
+sudo [36mgpasswd[m [36m-a[m [36mgddrx[m [36mplugdev[m
+opi [36mopenrazer-meta[m
+opi [36mopenrazer[m
+flatpak [36muninstall[m [36m--unused[m
+sudo [36mbtrfs[m [36mbalance[m [36mstart[m [36m-dusage=75[m [36m-musage=75[m [36m/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36msync[m [36m/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/gddrx/bin/ppdd/tgs_main/tdata/user_data#2/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/gddrx/bin/ppdd/tgs_main/tdata/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/gddrx/bin/ppdd/tgs_main/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/gddrx/bin/ppdd/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/gddrx/bin/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/gddrx/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/home/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdu[m [36m-s[m [36m/[96m*[m
+sudo [36mbtrfs[m [36mfilesystem[m [36musage[m [36m/[m
+sudo [36msnapper[m [36mlist[m
+sudo [36msnapper[m [36mdelete[m [36m769-770[m
+sudo [36msnapper[m [36mdelete[m [36m789-802[m
+sudo [36msnapper[m [36mdelete[m [36m--all[m
+snapper [36mlist[m
+flatpak [36mupdate[m
+sudo [36mhwinfo[m [36m--gfxcard[m
+sudo [36mzypper[m [36min[m [36mnvidia-compute-utils-G07[m
+glxgears
+glxinfo
+glxinfo [32m|[m grep [33m"OpenGL renderer"[m
+sdbootutil [36mupdate-all-entries[m
+lspci [36m-k[m [32m|[m grep [36mVGA[m
+lspci [32m|[m grep [36mVGA[m
+sudo [36mdmesg[m [36m-T[m [32m|[m grep [36mnvidia[m
+sudo [36mdmesg[m [36m-T[m
+sudo [36mdmesg[m [36m-T[m [36m-f[m
+mc
+df [36m-h[m
+exit
+journalctl [36m--since=[33m"1 hours ago"[m
+sudo [36mlittlesnitch[m [36m--daemon[m
+littlesnitch [36m--daemon[m
+littlesnitch
+littlesnitch [36m--help[m
+sudo [36m./xmrig[m
+cd [96m~[36m/bin/xdagminer/xmrig-6.25.0[m
+./honeygain.sh
+cd [96m~[36m/bin/runscpts/[m
+./grass.sh
+./vpn.sh [36mqbittorrent[m
+tmux
+opi [36mlittlesnitch[m
+zypper [36mpa[m [36m--orphaned[m
+zypper [36mpackages[m [36m--unneeded[m
+zypper [36mpackages[m [36m--orphaned[m
+sdrangel
+killall [36mhacktv[m
+pip [36minstall[m [36mgerber2stl[m
+pip [36minstall[m [36m--upgrade[m [36mpip[m
+pip [36minstall[m [36mgerber2gcode[m
+source [36m/home/gddrx/bin/gerber2stl/bin/activate.fish[m
+source [36m/home/gddrx/bin/gerber2stl/bin/activate[m
+source [96m~[36m/bin/gerber2stl/bin/activate[m
+source [96m~[36m/bin/gerber2stl[m
+python3.13 [36m-m[m [36mvenv[m [96m~[36m/bin/gerber2stl[m
+opi [96m*[36mgerber2stl[m
+opi [36mgerber2stl[m
+flatcam
+opi [36mvispy[m
+opi [36mpython3-vispy[m
+opi [36mFlatCAM[m
+opi [36mSDRangel[m
+opi [36mAngleSDR[m
+opi [36mhacktv[m
+flatpak [36m--help[m
+vmware
+5
+sudo [36mln[m [36m-s[m [36m/usr/lib64/libxml2.so.16[m [36m/usr/lib64/libxml2.so.2[m
+ls [36m-l[m [36m/usr/lib/libxml2.so.2[96m*[m
+ls [36m-l[m [36m/usr/lib64/libxml2.so.2[96m*[m
+sudo [36mtraceroute[m [36mcete-automotive.de[m
+traceroute [36mcete-automotive.de[m
+sudo [36mzypper[m [36min[m [36mtraceroute[m
+sudo [36mzypper[m [36m--help[m
+./esptool [36m--help[m
+cd [96m~[36m/bin/esptool-linux-amd64/[m
+opi [36mesptool-gui[m
+opi [36mesptool[m
+ls [36m-l[m [36m/dev/ttyACM[96m*[m
+sudo [36m./arduino-ide_2.3.8_Linux_64bit.AppImage[m
+cd [96m~[36m/bin/arduino_ide/[m
+diff [96m([mxxd [36m25D40-scaller-good-4.3-backup-2.BIN[m [32m|[m psub[96m)[m [96m([mxxd [36mbackup-2.BIN[m [32m|[m psub[96m)[m
+diff [96m([mxxd [36m25D40-scaller-good-4.3-backup-2.BIN[m [32m|[m psub[96m)[m [96m([mxxd [36m3333.BIN[m [32m|[m psub[96m)[m
+diff [36;1m<[;96m([mxxd [36m25D40-scaller-good-4.3-backup-2.BIN[96m)[m [36;1m<[;96m([mxxd [36m3333.BIN[96m)[m
+cmp [36m-l[m [36m25D40-scaller-good-4.3-backup-2.BIN[m [36mbackup-2.BIN[m
+cmp [36m-l[m [36m25D40-scaller-good-4.3-backup-2.BIN[m [36m3333.BIN[m
+cd [36mdownloads/Ch341A_Ver_134/[m
+IMSProg
+./vpn.sh [36mIMSProg_database_update[m
+IMSProg_database_update
+opi [36mimsprog[m
+sudo [36mzypper[m [36mdup[m
+./xdag-plus
+cd [36musr/bin/[m
+cd [36msquashfs-root/[m
+cd [96m~[36m/bin/xdagwallet/[m
+spectacle
+sudo [36mldconfig[m
+sudo [36mln[m [36m-s[m [36m/usr/lib64/libtesseract.so.5[m [36m/usr/lib64/libtesseract.so[m
+ls [36m-l[m [36m/usr/lib64/libtesseract.so.5[m
+ls [36m-l[m [36m/usr/lib64/libtesseract.so[m
+rpm [36m-ql[m [36mtesseract[m [32m|[m grep [36mlibtesseract[m
+spectacle [36m--help[m
+spectacle [36m--verbose[m
+spectacle [36m--debug[m
+spe
+ping [36mgoogle.com[m
+sudo [36mrmmod[m [32m&[m modprobe
+rmmod [32m&[m modprobe
+sudo [36mrfkill[m [36m--help[m
+sudo [36mrfkill[m
+rfkill
+resolvectl [36mstatus[m
+vopono [36m--help[m
+cat [36mvpn.sh[m
+dig [36m1.1.1.1[m
+ping [36m-c1[m [36m8.8.8.8[m
+ping [36m-c1[m [36mgateway[m
+ping [36m-c1[m [36m_gateway[m
+ip [36mr[m
+ip [36ma[m
+du [36m-sh[m [36m/var/lib/systemd/coredump[m
+rm [36m-r[m [36m/tmp/drkonqi-[96m*[m
+rm [36m-r[m [96m~[36m/.local/share/drkonqi/[96m*[m
+sudo [36mrm[m [36m/var/lib/systemd/coredump/[96m*[m
+sudo [36mcoredumpctl[m [36mpurge[m
+cd [36m/var/lib/systemd/coredump/[m
+drkonqi-coredump-gui
+drkonqi [36m--help[m
+ls [36m/usr/share/tessdata/[m
+sensors
+nano [36mconfig.json[m
+flatpak [36mrun[m [36m--branch=master[m [36m--arch=x86_64[m [36m--command=entrypoint[m [36m--file-forwarding[m [36mcom.orcaslicer.OrcaSlicer[m [36m@@u[m [36m%U[m [36m@@[m
+flatpak [36moverride[m [36m--user[m [36m--env=LC_ALL=en_US.UTF-8[m [36mcom.orcaslicer.OrcaSlicer[m
+flatpak [36moverride[m [36m--user[m [36m--env=LANG=en_US.UTF-8[m [36mcom.orcaslicer.OrcaSlicer[m
+flatpak [36mrun[m [36m--command=locale[m [36mcom.orcaslicer.OrcaSlicer[m
+run [36m--branch=master[m [36m--arch=x86_64[m [36m--command=entrypoint[m [36m--file-forwarding[m [36mcom.orcaslicer.OrcaSlicer[m [36m@@u[m [36m%U[m [36m@@[m
+flatpak [36mlist[m
+flatpak [36minstall[m [36mOrcaSlicer-Linux-flatpak_V2.3.2_x86_64.flatpak[m
+flatpak [36muninstall[m [36mio.github.orcaslicer.OrcaSlicer[m
+flatpak [36muninstall[m [36mcom.orcaslicer.OrcaSlicer[m
+systemctl [36m--user[m [36mrestart[m [36mplasma-plasmashell.service[m
+[36mLD_DEBUG[96m=[36mlibs[m /usr/lib/vmware/bin/appLoader
+sudo [36mLD_DEBUG=libs[m [36m/usr/lib/vmware/bin/appLoader[m [36;1m2>&1[m [32m|[m grep [36m-i[m [33m'not found'[m
+[36mLD_DEBUG[96m=[36mlibs[m /usr/lib/vmware/bin/appLoader [36;1m2>&1[m [32m|[m grep [36m-i[m [33m'not found'[m
+sudo [36mchmod[m [36m+x[m [36m/usr/lib/vmware/bin/vmware-setup-helper[m
+sudo [36mchmod[m [36m+x[m [36m/usr/lib/vmware/bin/appLoader[m
+sudo [36mvmware[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m
+vmware-installer [36m-l[m
+sudo [36mrm[m [36m-rf[m [36m/lib/modules/[96m$([muname [36m-r[96m)[36m/misc/vm[96m*[m
+sudo [36mrm[m [36m-rf[m [36m/usr/lib/vmware[m
+sudo [36mrm[m [36m-rf[m [36m/etc/vmware-installer[m
+sudo [36mvmware-installer[m [36m-u[m [36mvmware-workstation[m
+cat [36m/var/log/vmware-installer[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m [36m--install-bundle[m [36mvmware-workstation[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m [36m--install-bundle[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m [36m--install[m [36mvmware-workstation[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m [36m-i[m [36mvmware-workstation[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m [36m-l[m
+sudo [36m./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m [36m--help[m
+./VMware-Workstation-Full-25H2u1-25219725.x86_64.bundle
+chmod [36m+x[m [36mVMware-Workstation-Full-25H2u1-25219725.x86_64.bundle[m
+cd [36mdo[m
+ls [36;1m>>[m [36;1msusepaste[m
+asdasd [36;1m>>[m [36;1msusepaste[m
+echo [36mon[m [36;1m>[m [36;1msusepaste[m
+echo [36moff[m [36;1m>[m [36;1msusepaste[m
+susepaste
+echo [36moff[m [36;1m>>[m [36;1msusepaste[m
+./ping3.sh
+nano [36mping3.sh[m
+chmod [36m+x[m [36mping3.sh[m
+cd [36mpinger/[m
+mkdir [36mpinger[m
+cd [36mbin/[m
+sudo [36mlspci[m [32m|[m grep [36m-i[m [36mnetwork[m
+lsusb
+uname [36m-a[m
+ping [36m127.0.0.1[m
+ping [36m192.168.88.1[m
+ping
+sudo [36msystemctl[m [36mrestart[m [36mNetworkManager[m
+sudo [36mjournalctl[m [36m--since=[33m"8 hours ago"[m
+journalctl [36m--since=[33m"8 hours ago"[m
+journalctl [36m--since=[33m"9 hours ago"[m
+journalctl [36m--since=[33m"10 hours ago"[m
+journalctl [36m--since=[33m"6 hours ago"[m
+ifconfig
+kcalc
+cd [36mxmrig-6.25.0/[m
+cd [36mxdagminer/[m
+cd [36m..[m
+./vpn.sh [36mstop[m
+./vpn.sh [36m--help[m
+./vpn.sh
+sudo [36mdmesg[m [32m|[m grep [36m-i[m [36mfirmware[m
+sudo [36mdmesg[m [32m|[m grep [36m-i[m [36mwifi[m
+dmesg [32m|[m grep [36m-i[m [36mwifi[m
+sudo [36msystemctl[m [36mstop[m [36mfirewalld.service[m
+sudo [36mfirewall-cmd[m [36m--state[m
+ping [36m8.8.8.8[m
+sudo [36mnmcli[m [36mdevice[m [36mconnect[m [36mwlp67s0[m
+sudo [36mnmcli[m [36mdevice[m [36mdisconnect[m [36mwlp67s0[m
+sudo [36mnmcli[m [36mdevice[m [36mreapply[m [36mwlp67s0[m
+sudo [36mnmcli[m [36mdevice[m [36mreapply[m [36mwlp[96m*[m
+nmcli [36mdevice[m [36mshow[m [32m|[m grep [36mDHCP[m
+ip [36mroute[m
+ping [36m8[m
+tracepath [36mgoogle.com[m
+ifconfig [36m--all[m
+journalctl [36m-u[m [36mNetworkManager[m
+nano [36mbackup_config.json[m
+cd [36m./bin/runscpts/[m
+sudo [36mservice[m [36mrcnetwork[m [36mrestart[m
+sudo [36mservice[m [36mNetworkManager[m [36mrestart[m
+sudo [36mservice[m [36mnetworkmanager[m [36mrestart[m
+sudo [36mservice[m [36mdnsmasq[m [36mrestart[m
+sudo [36mservice[m [36mdnsmasq[m [36mstatus[m
+sudo [36mservice[m [36mresolved[m [36mstatus[m
+sudo [36mservice[m [36msystemd-resolved[m [36mstatus[m
+sudo [36mservice[m [36mnetwork[m [36mrestart[m
+journalctl [36m--since=[33m"3 days ago"[m [32m|[m grep [36merror[m
+journalctl [36m-u[m [36mearnapp_upgrader.service[m [36m--since[m [33m"3 days ago"[m
+journalctl [36m-u[m [36mearnapp_upgrader.service[m
+journalctl [36mu[m [36mearnapp_upgrader.service[m
+journalctl [36mservice[m [36mearnapp_upgrader.service[m
+journalctl [36m--since=[33m"2 days ago"[m [32m|[m grep [36mearnapp[m
+journalctl [36m--since[m [36m2[m [36mdays[m [36mago[m [32m|[m grep [36mearnapp[m
+journalctl [36m-S=[33m"2 days ago"[m [32m|[m grep [36mearnapp[m
+journalctl [36m-S=2[m [36mdays[m [36mago[m [32m|[m grep [36mearnapp[m
+journalctl [36m-S[m [36m2[m [36mdays[m [36mago[m [32m|[m grep [36mearnapp[m
+journalctl [36m-S[m [36m13.03.2026[m [32m|[m grep [36mearnapp[m
+journalctl [32m|[m grep [36mearnapp[m
+./xmrig
+cd [36m/home/gddrx/bin/xdagwallet/squashfs-root/usr/bin/[m
+./AppRun
+journalctl [36m-b[m [32m|[m grep [36m-E[m [33m"PM:|PME#"[m
+cat [36m/sys/power/mem_sleep[m
+journalctl [36m-b[m [32m|[m grep [33m"ACPI: PM"[m
+sudo [36mdmesg[m [32m|[m grep [36m-i[m [36macpi[m
+dmesg [32m|[m grep [36m-i[m [36macpi[m
+grep [36mHALT[m [36m/etc/sysconfig/shutdown[m
+last [36m-x[m [32m|[m head
+journalctl [36m-b[m [36m-1[m [32m|[m grep [36m-i[m [33m"shutdown"[m
+journalctl [36m-b[m [36m-1[m [32m|[m grep [36m-i[m [33m"power"[m
+lsmod [32m|[m grep [36mnvidia_drm[m
+sudoedit [36m/etc/kernel/cmdline[m
+sudo [36mbtrfs[m [36mdevice[m [36mstats[m [36m/[m
+sudo [36mbtrfs[m [36mscrub[m [36mstart[m [36m-Bd[m [36m/[m
+tmux [36mattach[m
+flatpak [36mremove[m [36m--unused[m
+flatpak [36mremove[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36minstall[m [36mOrcaSlicer-Linux-flatpak_V2.3.2-rc2_x86_64.flatpak[m
+flatpak [36minstall[m [36m./ORCaSlicer-Linux-flatpak_V2.3.2-RC_x86_64.flatpak[m
+cd [96m~[36m/downloads/[m
+./g
+sudo [36mnano[m [36m/etc/zypp/zypp.conf[m
+sudo [36mnano[m [36m/etc/environment[m
+flatpak [36mrepair[m [36m--user[m
+flatpak [36mrepair[m [36m--system[m
+history
+sudo [36msystemctl[m [36mshow[m [36mpackagekit[m
+sudo [36msystemctl[m [36m--help[m
+sudo [36msystemctl[m [36minfo[m [36mpackagekit[m
+sudo [36msystemctl[m [36mdaemon-reload[m
+sudo [36msystemctl[m [36mstatus[m [36mpackagekit[m
+sudo [36msystemctl[m [36mdisable[m [36mpackagekit[m
+sudo [36msystemctl[m [36mstop[m [36mpackagekit[m
+sudo [36mbtrfs[m [36mqgroup[m [36mshow[m [36m-pc[m [36m/[m
+btrfs [36mqgroup[m [36mshow[m [36m-pc[m [36m/[m
+sudo [36mbtrfs[m [36mscrub[m [36mstatus[m [36m/[m
+sudo [36mbtrfs[m [36mqgroup[m [36mshow[m [36m-c[m [36m/[m
+sudo [36mdmesg[m [36m-t[m
+sudo [36mdmesg[m [36m-H[m
+ping [36m176.105.214.71[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--debug[m [36m0[m
+flatpak [36m--user[m [36minstall[m [36m./repo[m [36morg.freedesktop.Platform.GL.nvidia-580-126-18[m
+flatpak [36m--user[m [36minstall[m [36m./repo[m [36morg.freedesktop.Platform.GL.nvidia-560-35-03[m
+flatpak [36mrun[m [36m--command=make[m [36m--env=FLATPAK_USER_DIR=[96m$HOME[36m/.local/share/flatpak[m [36morg.flatpak.Builder[m
+./update-data.sh
+nano [36mupdate-data.sh[m
+echo [33m'DRIVER_VERSIONS="580.126.18"'[m [36;1m>>[m [36;1mversions.sh[m
+cd [36morg.freedesktop.Platform.GL.nvidia[m
+cd [96m~[36m/bin/[m
+rm [36mversions.sh[m
+ls [36mversions.sh[m
+git [36mclone[m [36mhttps://github.com/flathub/org.freedesktop.Platform.GL.nvidia.git[m
+sudo [36mzypper[m [36min[m [36mgit[m
+flatpak [36m--user[m [36minstall[m [36mflathub[m [36morg.flatpak.Builder[m
+flatpak [36mgit[m
+flatpak [36m--list[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--debug[m [36m0[m [32m|[m susepaste
+flatpak [36mrun[m [36m--env=__GLX_VENDOR_LIBRARY_NAME=mesa[m \
+            [36m--env=__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json[m \
+            [36m--env=MESA_LOADER_DRIVER_OVERRIDE=zink[m \
+            [36m--env=GALLIUM_DRIVER=zink[m \
+            [36m--env=WEBKIT_DISABLE_DMABUF_RENDERER=1[m \
+            [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36m--env=__GLX_VENDOR_LIBRARY_NAME=mesa[m \
+            [36m--env=__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json[m \
+            [36m--env=MESA_LOADER_DRIVER_OVERRIDE=zink[m \
+            [36m--env=GALLIUM_DRIVER=zink[m \
+            [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--debug[m [36m1[m
+sudo [36mtail[m [36m-n[m [36m10000[m [36m/var/log/zypp/history[m [32m|[m grep [36megl[m
+sudo [36mtail[m [36m-n[m [36m10000[m [36m/var/log/zypp/history[m [32m|[m grep [36mnvidia[m
+sudo [36mtail[m [36m-n[m [36m10000[m [36m/var/log/zypp/history[m
+sudo [36mtail[m [36m-n[m [36m100[m [36m/var/log/zypp/history[m
+sudo [36mzypper-log[m
+zypper-log
+flatpak [36mrun[m [36m--env=GBM_BACKEND=nvidia-drm[m [36m--env=__GLX_VENDOR_LIBRARY_NAME=nvidia[m [36mio.github.softfever.OrcaSlicer[m
+echo [96m$XDG_SESSION_TYPE[m
+flatpak [36mrun[m [36m--env=WEBKIT_FORCE_COMPOSITING_MODE=0[m [36m--env=LIBGL_ALWAYS_SOFTWARE=1[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36m--env=WEBKIT_DISABLE_COMPOSITING_MODE=1[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36msearch[m [36morg.freedesktop.Platform.GL.nvidia[m
+flatpak [36mupdate[m [36m--appstream[m
+flatpak [36mrun[m [36m--env=GDK_BACKEND=x11[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36m--env=__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36m--env=GBM_BACKEND=dri[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36minstall[m [36mOrcaSlicer-Linux-flatpak_V2.3.2-beta2_x86_64.flatpak[m
+flatpak [36mlist[m [32m|[m grep [36mOrca[m
+flatpak [36muninstall[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--ozone-platform=x11[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--debug[m [36m0[m [36m--ozone-platform=x11[m
+flatpak [36msearch[m [36mmesa[m
+flatpak [36msearch[m [36mcanberra[m
+flatpak [36msearch[m [36mcanberra-gtk-module[m
+flatpak [36mremote-info[m [36mcanberra-gtk-module[m
+sudo [36mflatpak[m [36mupdate[m
+sudo [36mflatpak[m [36mrepair[m
+flatpak [36mrun[m [36m--env=WEBKIT_DISABLE_DMABUF_RENDERER=1[m [36mio.github.softfever.OrcaSlicer[m
+[36mWEBKIT_DISABLE_DMABUF_RENDERER[96m=[36m1[m /home/gddrx/bin/orcaslicer_appimage/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.3.1.AppImage
+flatpak [36mrun[m \
+  [36m--env=LIBGL_ALWAYS_SOFTWARE=1[m \
+  [36m--env=QT_XCB_GL_INTEGRATION=none[m \
+  [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36m--env=LIBGL_ALWAYS_SOFTWARE=1[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--software-rendering[m
+flatpak [36mremote-info[m [36mflathub[m [36morg.freedesktop.Platform.GL.nvidia[m
+flatpak [36mremote-info[m [36m--log[m [36mflathub[m [36morg.freedesktop.Platform.GL.nvidiaflatpak[m [36mremote-info[m [36mflathub[m [36morg.freedesktop.Platform.GL.nvidia[m
+flatpak [36mlist[m [32m|[m grep [36mnvidia[m
+flatpak [36mrun[m [36m--command=glxinfo[m [36mio.github.softfever.OrcaSlicer[m [36m--debug[m [36m0[m
+flatpak [36mrun[m [36m--command=glxinfo[m
+flatpak [36mremote-info[m [36m--log[m [36mflathub[m [36morg.freedesktop.Platform.VAAPI[m
+flatpak [36mremote-info[m [36m--log[m [36mflathub[m [96m*[36mnvidia[96m*[m
+flatpak [36mremote-info[m [36m--log[m [36mflathub[m [36mnvidia[m
+flatpak [36mremote-info[m [36m--log[m [36mflathub[m [36morg.freedesktop.Platform.GL.nvidia[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m [36m--verbose[m
+flatpak [36mrun[m [36morg.orca-slicer.OrcaSlicer[m [36m--verbose[m
+winecfg
+flatpak [36mremove[m [36mio.github.labbots.NiimPrintX[m
+flatpak [36muninstall[m [36mio.github.labbots.NiimPrintX[m
+flatpak [36mrun[m [36mio.github.labbots.NiimPrintX[m
+flatpak [36minstall[m [36mio.github.labbots.NiimPrintX[m
+flatpak [36msearch[m [36mniimbot[m
+./NiimPrintX
+chmod [36m+x[m [36mNiimPrintX[m
+sudo [36mdmesg[m [36m-f[m
+flatpak [36minstall[m [36m--user[m [36m./OrcaSlicer-Linux-flatpak_V2.3.2-beta2_x86_64.flatpak[m
+flatpak [36minstall[m [36m--user[m [36m./downloads/OrcaSlicer-Linux-flatpak_V2.3.2-beta_x86_64.flatpak[m
+flatpak [36minstall[m [36m--user[m [36m./OrcaSlicer-Linux-flatpak_V2.3.2-beta_x86_64.flatpak[m
+flatpak [36minfo[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mremotes[m [36m--show-details[m
+flatpak [36mremote-info[m [36morcaslicer-origin[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mremote-info[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mremote-info[m [36mflathub[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mlist[m [36m--app[m
+./restore_amd.sh
+journalctl [36m--system[m [36m-f[m
+sudo [36mzypper[m [36mclean[m
+sudo [36mfio[m [36m--name=mixed[m [36m--filename=/dev/sdb[m [36m--rw=randrw[m [36m--rwmixread=30[m [36m--bs=4k[m [36m--ioengine=libaio[m [36m--direct=1[m [36m--numjobs=4[m [36m--iodepth=64[m [36m--time_based[m [36m--runtime=7200[m [36m--status-interval=5[m
+sudo [36mfio[m [36m--name=seq[m [36m--rw=read[m [36m--bs=1M[m [36m--iodepth=1[m [36m--size=4G[m [36m--filename=/dev/sdb[m
+fio [36m--name=seq[m [36m--rw=read[m [36m--bs=1M[m [36m--iodepth=1[m [36m--size=4G[m [36m--filename=/dev/sdb[m
+sudo [36msmartctl[m [36m-a[m [36m/dev/sdb[m
+sudo [36msmartctl[m [36m-t[m [36mshort[m [36m/dev/sdb[m
+sudo [36mnvme[m [36mself-test[m [36m/dev/sdb[m [36m--start[m [36m--st=1[m
+sudo [36mnvme[m [36msmart-log[m [36m/dev/sdb[m
+sudo [36msmartctl[m [36m-a[m [36m/dev/sda[m
+journalctl [36m--system[m [36m-f[m [36m-n[m [36m50[m
+sudo [36mshowconsolefont[m
+zcat [36m/proc/config.gz[m [32m|[m grep [36mCONFIG_FONT[m
+showconsolefont
+journalctl [36m-f[m [36m-n[m [36m50[m
+cd [36msquashfs-root[m
+./Xdag-Plus-x86_64-0.1.5.AppImage [36m--appimage-extract[m
+./Xdag-Plus-x86_64-0.1.5.AppImage
+export [36m__GLX_VENDOR_LIBRARY_NAME=mesa[m
+[36mWAYLAND_DISPLAY[96m=[m ./Xdag-Plus-x86_64-0.1.5.AppImage
+[36mWINIT_UNIX_BACKEND[96m=[36mx11[m ./Xdag-Plus-x86_64-0.1.5.AppImage
+[36mLIBGL_ALWAYS_SOFTWARE[96m=[36m1[m ./Xdag-Plus-x86_64-0.1.5.AppImage
+opi [36mwaydroid[m
+sudo [36mzypper[m [36mwaydroid[m
+env [32m|[m grep [36m-i[m [36mfont[m
+fc-list [32m|[m head
+file [36m/etc/fonts/fonts.conf[m
+ls [36m-l[m [36m/etc/fonts/fonts.conf[m
+systemctl [36m--user[m [36mlist-timers[m [36m--all[m
+systemctl [36m--user[m [36mlist-timers[m
+ls [96m~[36m/.config/autostart/[m
+journalctl [36m-f[m
+journalctl [36m--system[m [36m-n[m [36m50[m
+journalctl [36m--system[m
+cd [36mbin/runscpts/[m
+sudo [36mdmesg[m [32m|[m grep [36m-i[m [36mnvidia[m
+dmesg [32m|[m grep [36m-i[m [36mnvidia[m
+ls [36m/sys/module[m [32m|[m grep [36m-E[m [33m"nvidia|nvidia_open"[m
+lsmod [32m|[m grep [36m-E[m [33m"nvidia|nvidia_open"[m
+sudo [36mmodinfo[m [36mnvidia_open[m [36;1m2>/dev/null[m [32m|[m grep [36m-E[m [33m"version|filename"[m
+modinfo [36mnvidia_open[m [36;1m2>/dev/null[m [32m|[m grep [36m-E[m [33m"version|filename"[m
+sudo [36mmodinfo[m [36mnvidia[m [36;1m2>/dev/null[m [32m|[m grep [36m-E[m [33m"version|filename"[m
+modinfo [36mnvidia[m [36;1m2>/dev/null[m [32m|[m grep [36m-E[m [33m"version|filename"[m
+lsmod [32m|[m grep [36m-E[m [33m"nvidia|nouveau"[m
+journalctl [36m-b[m [32m|[m grep [36mXid[m
+sudo [36mdmesg[m [32m|[m grep [36m-i[m [36mnvr[m
+dmesg [32m|[m grep [36m-i[m [36mnvr[m
+journalctl [36m-b[m [36m-p[m [36merr[m [32m|[m grep [36m-i[m [36mnvidia[m
+systemctl [36mstatus[m [36msystemd-zram-setup@zram0.service[m
+[36mWEBKIT_DISABLE_DMABUF_RENDERER[96m=[36m1[m proton-authenticator
+cat [36morcaslicer.sh[m
+sudo [36mzypper[m [36minstall[m [36m./ProtonAuthenticator-1.1.4-1.x86_64.rpm[m
+./linux_krokiet_heif_raw_x86_64
+rm [96m~[36m/.config/krokiet/config_general.json[m
+chmod [36m+x[m [36mlinux_krokiet_heif_raw_x86_64[m
+nano [96m~[36m/.config/krokiet/config_general.json[m
+./linux_krokiet_heif_raw_skia_vulkan_x86_64
+chmod [36m+x[m [36mlinux_krokiet_heif_raw_skia_vulkan_x86_64[m
+nano [96m~[36m/.config/krokiet/config_preset_0.json[m
+./linux_krokiet_skia_vulkan_x86_64
+chmod [36m+x[m [36m./linux_krokiet_skia_vulkan_x86_64[m
+cd [36mkrokiet/[m
+./linux_czkawka_gui_x86_64
+chmod [36m+x[m [36mlinux_czkawka_gui_x86_64[m
+cd [96m~[36m/bin/czkawka[m
+cd [96m~[36m/downloads/czkawka[m
+opi [36mrmlint-gui[m
+opi [36mshredder[m
+rmlint [36m--gui[m
+rmlint
+opi [36mrmlint[m
+opi [36mShredder[m
+sudo [36mzypper[m [36minstall[m [36mShredder[m
+sudo [36mzypper[m [36minstall[m [36mrmlint[m
+opi [36mrmlint‑gui[m
+sudo [36mzypper[m [36minstall[m [36mrmlint‑gui[m
+flatpak [36minstall[m [36mflathub[m [36mnet.voltaicideas.dupeGuru[m
+flatpak [36mremotes[m [36m-d[m
+flatpak [36mremotes[m
+opi [36mdupeguru[m
+dupeguru
+sudo [36mzypper[m [36minstall[m [36m./dupeguru-4.3.1-2.x86_64.rpm[m
+flatpak [36msearch[m [36mdupeGuru[m
+flatpak [36msearch[m [36mdupeguru[m
+sudo [36mzypper[m [36minstall[m [36mdupeguru[m
+nano [36m/home/gddrx/.local/share/applications/Zen.desktop[m
+sudo [36mzypper[m [36min[m [36m./bleachbit-5.0.2-1.1.opensuseTumbleweed.noarch.rpm[m
+sudo [36mzypper[m [36minstall[m [36mbleachbit[m
+./GoLogin-4.0.2
+cd [96m~[36m/bin/gologin/[m
+kbuildsycoca5 [36m--noincremental[m
+echo [33m"Sasai 4len > Oleg"[m
+flatpak [36minstall[m [36mflathub[m [36mcom.github.tchx84.Flatseal[m
+flatpak [36minfo[m [36m--show-permissions[m [36mcom.xnview.XnViewMP[m
+ls [96m~[36m/.config/menus/[m
+flatpak [36mrun[m [36mcom.xnview.XnViewMP[m
+flatpak [36moverride[m [36m--user[m [36m--filesystem=/mnt/d[m [36mcom.xnview.XnViewMP[m
+flatpak [36minstall[m [36mflathub[m [36mcom.xnview.XnViewMP[m
+nano [96m~[36m/.config/digikamrc[m
+grep [36mDeleteMode[m [96m~[36m/.config/digikamrc[m
+sed [36m-i[m [33m's/DeleteMode=1/DeleteMode=0/'[m [96m~[36m/.config/digikamrc[m
+sudo [36mzypper[m [36min[m [36mexiftool[m
+sudo [36mzypper[m [36min[m [36mdigikam[m
+sudo [36mzypper[m [36min[m [36mdigicam[m
+sudo [36mbtrfs[m [36mqgroup[m [36mshow[m [36m-pcre[m [36m/[m
+sudo [36mbtrfs[m [36mquota[m [36mrescan[m [36m-s[m [36m/[m
+sudo [36mbtrfs[m [36mquota[m [36mrescan[m [36mstatus[m
+sudo [36mbtrfs[m [36mquota[m [36mrescan[m [36mstatus[m [36m/[m
+sudo [36mblkid[m [36m/dev/dm-1[m
+blkid [36m/dev/dm-1[m
+lsblk [36m-f[m
+mount
+dmesg [32m|[m grep [36m-i[m [36mfirmware[m
+dmesg
+free [36m-h[m
+sudo [36msystemctl[m [36mstart[m [36mearnapp[m
+killall [36m-9[m [36mearnapp[m
+sudo [36msystemctl[m [36mstatus[m [36mearnapp[m
+sudo [36msystemctl[m [36mstop[m [36mearnapp[m
+for [36mf[m in [96m*[36m.mp3[96m*[32m;[m set [36mnew[m [96m([mstring [36mreplace[m [36m-r[m [33m'\.mp3_+$'[m [33m'.mp3'[m [33m"[96m$f[33m"[96m)[32m;[m mv [36m-v[m [33m"[96m$f[33m"[m [33m"[96m$new[33m"[32m;[m end
+file-rename [36m-n[m [33m'($_,$ext)=/^(.*)(\.[^.]+)$/; s/А/A/g; s/Б/B/g; s/В/V/g; s/Г/G/g; s/Д/D/g; s/Е/E/g; s/Ё/E/g; s/Ж/Zh/g; s/З/Z/g; s/И/I/g; s/Й/J/g; s/К/K/g; s/Л/L/g; s/М/M/g; s/Н/N/g; s/О/O/g; s/П/P/g; s/Р/R/g; s/С/S/g; s/Т/T/g; s/У/U/g; s/Ф/F/g; s/Х/Kh/g; s/Ц/Ts/g; s/Ч/Ch/g; s/Ш/Sh/g; s/Щ/Shch/g; s/Ъ//g; s/Ы/Y/g; s/Ь//g; s/Э/E/g; s/Ю/Yu/g; s/Я/Ya/g; s/а/a/g; s/б/b/g; s/в/v/g; s/г/g/g; s/д/d/g; s/е/e/g; s/ё/e/g; s/ж/zh/g; s/з/z/g; s/и/i/g; s/й/j/g; s/к/k/g; s/л/l/g; s/м/m/g; s/н/n/g; s/о/o/g; s/п/p/g; s/р/r/g; s/с/s/g; s/т/t/g; s/у/u/g; s/ф/f/g; s/х/kh/g; s/ц/ts/g; s/ч/ch/g; s/ш/sh/g; s/щ/shch/g; s/ъ//g; s/ы/y/g; s/ь//g; s/э/e/g; s/ю/yu/g; s/я/ya/g; s/[^a-zA-Z0-9._ -]//g; s/ /_/g; $_=lc($_); s/\.(?=.*\.)//g; $_=substr($_,0,220); $new=$_.$ext; while(-e $new){$new.="_"}; $_=$new'[m [96m*[36m.mp3[m
+./fad.sh [36m/mnt/d/stage_upl0ad/media/audio/music/olds[m
+./fad.sh [36m/mnt/d/stage_upl0ad/media/audio/music/olds/[m
+chmod [36m+x[m [36mfad.sh[m
+nano [36mfad.sh[m
+fpcalc [36m2db_-_terrahawk.mp3_[m
+fpcalc [36m--version[m
+file-rename [33m's/А/ A/g; s/Б/B/g; s/В/V/g; s/Г/G/g; s/Д/D/g; s/Е/E/g; s/Ё/E/g; s/Ж/Zh/g; s/З/Z/g; s/И/I/g; s/Й/J/g; s/К/K/g; s/Л/L/g; s/М/M/g; s/Н/N/g; s/О/O/g; s/П/P/g; s/Р/R/g; s/С/S/g; s/Т/T/g; s/У/U/g; s/Ф/F/g; s/Х/Kh/g; s/Ц/Ts/g; s/Ч/Ch/g; s/Ш/Sh/g; s/Щ/Shch/g; s/Ъ//g; s/Ы/Y/g; s/Ь//g; s/Э/E/g; s/Ю/Yu/g; s/Я/Ya/g; s/а/a/g; s/б/b/g; s/в/v/g; s/г/g/g; s/д/d/g; s/е/e/g; s/ё/e/g; s/ж/zh/g; s/з/z/g; s/и/i/g; s/й/j/g; s/к/k/g; s/л/l/g; s/м/m/g; s/н/n/g; s/о/o/g; s/п/p/g; s/р/r/g; s/с/s/g; s/т/t/g; s/у/u/g; s/ф/f/g; s/х/kh/g; s/ц/ts/g; s/ч/ch/g; s/ш/sh/g; s/щ/shch/g; s/ъ//g; s/ы/y/g; s/ь//g; s/э/e/g; s/ю/yu/g; s/я/ya/g; s/[^a-zA-Z0-9._ -]//g; s/ /_/g; $_=lc($_); s/\.(?=.*\.)//g; $_=substr($_,0,220); while(-e $_){$_ .= "_"}'[m [96m*[36m.mp3[m
+nano [36m/home/gddrx/.config/MusicBrainz/Picard.ini[m
+sudo [36mzypper[m [36minstall[m [36mfpcalc[m
+sudo [36mzypper[m [36minstall[m [36mpicard[m
+opi [36mczkawka[m
+Czkawka
+opi [36mchromaprint[m
+cnf [36mchromaprint[m
+Chromaprint
+file-rename [36m-n[m [33m's/А/ A/g; s/Б/B/g; s/В/V/g; s/Г/G/g; s/Д/D/g; s/Е/E/g; s/Ё/E/g; s/Ж/Zh/g; s/З/Z/g; s/И/I/g; s/Й/J/g; s/К/K/g; s/Л/L/g; s/М/M/g; s/Н/N/g; s/О/O/g; s/П/P/g; s/Р/R/g; s/С/S/g; s/Т/T/g; s/У/U/g; s/Ф/F/g; s/Х/Kh/g; s/Ц/Ts/g; s/Ч/Ch/g; s/Ш/Sh/g; s/Щ/Shch/g; s/Ъ//g; s/Ы/Y/g; s/Ь//g; s/Э/E/g; s/Ю/Yu/g; s/Я/Ya/g; s/а/a/g; s/б/b/g; s/в/v/g; s/г/g/g; s/д/d/g; s/е/e/g; s/ё/e/g; s/ж/zh/g; s/з/z/g; s/и/i/g; s/й/j/g; s/к/k/g; s/л/l/g; s/м/m/g; s/н/n/g; s/о/o/g; s/п/p/g; s/р/r/g; s/с/s/g; s/т/t/g; s/у/u/g; s/ф/f/g; s/х/kh/g; s/ц/ts/g; s/ч/ch/g; s/ш/sh/g; s/щ/shch/g; s/ъ//g; s/ы/y/g; s/ь//g; s/э/e/g; s/ю/yu/g; s/я/ya/g; s/[^a-zA-Z0-9._ -]//g; s/ /_/g; $_=lc($_); s/\.(?=.*\.)//g; $_=substr($_,0,220); while(-e $_){$_ .= "_"}'[m [96m*[36m.mp3[m
+file-rename [36m-n[m [33m'tr/АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя/ABVGDEEJZIJKLMNOPRSTUFHCCHSHSHCHY_EUAabvgdeejzijklmnoprstufhcchshshchy_eua/; s/[^a-zA-Z0-9._ -]//g; s/ /_/g; $_=lc($_); s/\.(?=.*\.)//g; $_=substr($_,0,220); while(-e $_){$_ .= "_"}'[m [96m*[36m.mp3[m
+file-rename [36m-n[m [33m's/[^a-zA-Z0-9._ -]//g; s/ /_/g; $_=lc($_); s/\.(?=.*\.)//g; $_=substr($_,0,220); while(-e $_){$_ .= "_"}'[m [96m*[36m.mp3[m
+sudo [36mzypper[m [36minstall[m [36mperl-File-Rename[m
+rename [36m--version[m
+which [36mrename.pl[m
+rename [36m--help[m
+rename [36m-n[m [33m's/[^a-zA-Z0-9._ -]//g; s/ /_/g; $_=lc($_); s/\.(?=.*\.)//g; $_=substr($_,0,220); while(-e $_){$_ .= "_"}'[m [96m*[36m.mp3[m
+cd [36molds/[m
+cd [36m/mnt/d/stage_upl0ad/media/audio/music/[m
+flatpak [36moverride[m [36m--user[m [36m--filesystem=/mnt/d[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36moverride[m [36m--user[m [36m--filesystem=/mnt/d[m [36morg.cryptomator.Cryptomator[m
+cnf [36m7zFM[m
+sudo [36mzypper[m [36minstall[m [36mcnf[m
+7zFM
+opi [36mp7zip-gui[m
+sudo [36mzypper[m [36minstall[m [36mp7zip-full[m [36mp7zip-gui[m
+flatpak [36minstall[m [36mapp.zen_browser.zen[m
+flatpak [36muninstall[m [36mzen[m
+flatpak [36minstall[m [36mzen[m
+flatpak [36msearch[m [36mzen[m
+ps [36m-a[m
+./zen
+cd [36mzen/[m
+flatpak [36minstall[m [36mflathub[m [36morg.onlyoffice.desktopeditors[m
+rclone [36mconfig[m
+systemctl [36m--user[m [36mdaemon-reload[m
+rm [96m~[36m/.config/systemd/user/rclone-proton.service[m
+systemctl [36m--user[m [36mstop[m [36mrclone-proton.service[m
+systemctl [36m--user[m [36mstart[m [36mrclone-proton.service[m
+nano [96m~[36m/.config/systemd/user/rclone-proton.service[m
+rclone [36mconfig[m [36mshow[m
+journalctl [36m--user[m [36m-u[m [36mrclone-proton.service[m [36m-f[m
+rclone [36mlsd[m [33m"protondrive:Computers"[m
+rclone [36mlsd[m [36mprotondrive:[m
+systemctl [36m--user[m [36mstatus[m [36mrclone-proton.service[m
+fusermount3 [36m-u[m [96m~[36m/protondrive[m
+systemctl [36m--user[m [36mrestart[m [36mrclone-proton.service[m
+rclone [36mls[m [36mprotondrive[m
+mkdir [36m-p[m [96m~[36m/protondrive[m
+rclone [36mls[m [36mproton[m
+bat [96m~[36m/.config/systemd/user/rclone-onedrive.service[m
+sudo [36m-E[m [36mopenrgb[m [36m--verbose[m
+sudo [36m-E[m [36mopenrgb[m
+ls [36m/dev/i2c-[96m*[m
+sudo [36m-E[m [36m./OpenRGB.AppImage[m
+sudo [36mopenrgb[m
+sudo [36mmodprobe[m [36mi2c-piix4[m
+sudo [36mmodprobe[m [36mi2c-dev[m
+sudo [36mzypper[m [36min[m [36mOpenRGB[m
+sudo [36mzypper[m [36min[m [36mopenrgb[m
+sudo [36mzypper[m [36mse[m [36mopenrgb[m
+sudo [36mturbostat[m
+sudo [36mzypper[m [36mar[m [36m-f[m [36mhttps://download.nvidia.com/opensuse/tumbleweed[m [36mNVIDIA[m
+watch [36m-n1[m [33m"cat /proc/cpuinfo | grep MHz"[m
+./limit_amd.sh
+nano [36mrestore_amd.sh[m
+nano [36mlimit_amd.sh[m
+cat [36m/sys/devices/system/cpu/cpu0/cpufreq/scaling_driver[m
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_driver
+echo [36m0[m [32m|[m sudo [36mtee[m [36m/sys/devices/system/cpu/cpufreq/boost[m
+cat [36m/sys/devices/system/cpu/cpufreq/boost[m
+chmod [36m+x[m [36mrestore_amd.sh[m
+chmod [36m+x[m [36mlimit_amd.sh[m
+cpupower [36mfrequency-info[m
+sudo [36mcpupower[m [36mfrequency-set[m [36m-u[m [36m3800[m [36mMHz[m
+nano [36mlow_cpu_mode[m
+sudo [36mcpupower[m [36mfrequency-set[m [36m-u[m [36m5000[m [36mMHz[m
+sudo [36mcpupower[m [36mfrequency-set[m [36m-u[m [36m4500[m [36mMHz[m
+sudo [36mpowertop[m
+ls [36m/sys/class/hwmon/[m
+sudo [36mcpupower[m [36mfrequency-set[m [36m-u[m [36m578MHz[m
+sudo [36mcpupower[m [36mfrequency-set[m [36m-u[m [36m800MHz[m
+sudo [36mcpupower[m [36mfrequency-set[m [36m-g[m [36mpowersave[m
+echo [33m"MB: "[96m([msudo [36mdmidecode[m [36m-t[m [36mbaseboard[m [32m|[m grep [36m-E[m [33m"Manufacturer|Product"[m [32m|[m awk [36m-F:[m [33m'{gsub(/^[ \t]+/,"",$2); printf $2" "}'[96m)[32m;[m echo [33m"CPU: "[96m([mlscpu [32m|[m grep [33m"Model name"[m [32m|[m awk [36m-F:[m [33m'{gsub(/^[ \t]+/,"",$2); print $2}'[96m)[32m;[m echo [33m"RAM: "[96m([msudo [36mdmidecode[m [36m-t[m [36mmemory[m [32m|[m grep [36m-E[m [33m"Manufacturer|Part Number"[m [32m|[m grep [36m-v[m [33m"Not Specified"[m [32m|[m awk [36m-F:[m [33m'{gsub(/^[ \t]+/,"",$2); printf $2" "}'[96m)[32m;[m echo [33m"DISKS:"[32m;[m lsblk [36m-d[m [36m-o[m [36mMODEL,VENDOR[m [32m|[m tail [36m-n[m [36m+2[32m;[m echo [33m"GPU: "[96m([mlspci [32m|[m grep [36m-E[m [33m"VGA|3D"[m [32m|[m sed [33m's/.*: //'[96m)[m
+echo [33m"MB: "[96m([msudo [36mdmidecode[m [36m-t[m [36mbaseboard[m [32m|[m awk [36m-F:[m [33m'/Manufacturer|Product/ {gsub(/^[ \t]+/,"",$2); printf $2" "})"; echo CPU: "(lscpu | awk -F: '[36m/Model[m [36mname/[m [96m{[36mgsub[96m([m/^[ [96m\t[m]+/,[33m""[m,[96m$2)[36m; print [96m$2})[33m"; echo "[36mRAM:[m [33m"(sudo dmidecode -t memory | awk -F: '/Manufacturer|Part Number/ && [96m$2[33m !~ /Not Specified/ {gsub(/^[ \t]+/,"",[96m$2[33m); printf [96m$2[33m"[m [33m"})"[32m;[m echo [33m"DISKS:"[32m;[m lsblk [36m-d[m [36m-o[m [36mMODEL,VENDOR[m [32m|[m tail [36m-n[m [36m+2[32m;[m echo [33m"GPU: "[96m([mlspci [32m|[m grep [36m-E[m [33m'VGA|3D'[m [32m|[m sed [33m's/.*: //'[96m)[m
+echo [33m"MB: "[96m([msudo [36mdmidecode[m [36m-t[m [36mbaseboard[m [32m|[m awk [36m-F:[m [33m'/Manufacturer|Product/ {gsub(/^[ \t]+/,"",$2); printf $2" "}'[96m)[33m"; echo CPU: "[96m([mlscpu [32m|[m awk [36m-F:[m [33m'/Model name/ {gsub(/^[ \t]+/,"",$2); print $2}'[96m)[33m"; echo "[36mRAM:[m [33m"(sudo dmidecode -t memory | awk -F: '/Manufacturer|Part Number/ && [96m$2[33m !~ /Not Specified/ {gsub(/^[ \t]+/,"",[96m$2[33m); printf [96m$2[33m"[m [33m"}')"[32m;[m echo [33m"DISKS:"[32m;[m lsblk [36m-d[m [36m-o[m [36mMODEL,VENDOR[m [32m|[m tail [36m-n[m [36m+2[32m;[m echo [33m"GPU: "[96m([mlspci [32m|[m grep [36m-E[m [33m'VGA|3D'[m [32m|[m cut [36m-d:[m [36m-f3[m [32m|[m sed [33m's/^ //'[96m)[m
+echo [33m"MB: [96m$([msudo [36mdmidecode[m [36m-t[m [36mbaseboard[m [32m|[m awk [36m-F:[m [33m'/Manufacturer|Product/ {gsub(/^[ \t]+/,\"\",$2); printf $2\" \"}'[96m)[33m"[32m;[m echo [33m"CPU: [96m$([mlscpu [32m|[m awk [36m-F:[m [33m'/Model name/ {gsub(/^[ \t]+/,\"\",$2); print $2}'[96m)[33m"[32m;[m echo [33m"RAM: [96m$([msudo [36mdmidecode[m [36m-t[m [36mmemory[m [32m|[m awk [36m-F:[m [33m'/Manufacturer|Part Number/ && $2 !~ /Not Specified/ {gsub(/^[ \t]+/,\"\",$2); printf $2\" \"}'[96m)[33m"[32m;[m echo [33m"DISKS:"[32m;[m lsblk [36m-d[m [36m-o[m [36mMODEL,VENDOR[m [32m|[m tail [36m-n[m [36m+2[32m;[m echo [33m"GPU: [96m$([mlspci [32m|[m grep [36m-E[m [33m'VGA|3D'[m [32m|[m cut [36m-d:[m [36m-f3[m [32m|[m sed [33m's/^ //'[96m)[33m"[m
+who
+tide [36mconfigure[m
+flatpak [36moverride[m [36m--user[m [36m--env=SIGNAL_PASSWORD_STORE=kwallet[m [36morg.signal.Signal[m
+sudo [36mmc[m
+cd [36m/var/lib/flatpak/overrides/[m
+flatpak [36moverride[m [36m--env=SIGNAL_PASSWORD_STORE=kwallet[m [36morg.signal.Signal[m
+flatpak [36mrun[m [36morg.signal.Signal[m
+sudo [36mflatpak[m [36moverride[m [36m--env=SIGNAL_PASSWORD_STORE=kwallet[m [36morg.signal.Signal[m
+sudo [36mflatpak[m [36moverride[m [36m--env=SIGNAL_PASSWORD_STORE=kwallet6[m [36morg.signal.Signal[m
+flatpak [36moverride[m [36m--env=SIGNAL_PASSWORD_STORE=kwallet6[m [36morg.signal.Signal[m
+flatpak [36minstall[m [36mflathub[m [36morg.signal.Signal[m
+flatpak [36mlist[m [36m--user[m
+flatpak [36mremote-add[m [36m--if-not-exists[m [36mflathub[m [36mhttps://flathub.org/repo/flathub.flatpakrepo[m
+sudo [36mzypper[m [36minstall[m [36msignal[m
+btop
+sudo [36mzypper[m [36minstall[m [36mbtop[m
+nvtop
+sudo [36mzypper[m [36minstall[m [36mnvtop[m
+flatpak [36mrun[m [36mio.github.softfever.OrcaSlicer[m
+flatpak [36mrun[m [36mcom.softfever.OrcaSlicer[m
+flatpak [36minstall[m [36m--user[m [36m./OrcaSlicer-Linux-flatpak_V2.3.1_x86_64.flatpak[m
+flatpak [36msearch[m [36morca[m
+flatpak [36minstall[m [36mcom.softfever.OrcaSlicer[m
+[36mQT_QPA_PLATFORM[96m=[36mxcb[m ./orcaslicer.sh
+./orcaslicer.sh
+cat [96m~[36m/.config/systemd/user/rclone-onedrive.service[m
+journalctl [36m--user[m [36m-u[m [36mrclone-onedrive.service[m [36m-f[m
+systemctl [36m--user[m [36mstart[m [36mrclone-onedrive.service[m
+rm [36m-rf[m [96m~[36m/.cache/rclone[m
+systemctl [36m--user[m [36mstop[m [36mrclone-onedrive.service[m
+systemctl [36m--user[m [36mrestart[m [36mrclone-onedrive.service[m
+nano [96m~[36m/.config/systemd/user/rclone-onedrive.service[m
+ls [36m-1[m [96m~[36m/.config/systemd/user/[m
+rm [36m-r[m [96m~[36m/.config/systemd/user/systemd-resume.service.wants/[m
+rm [36m-r[m [96m~[36m/.config/systemd/user/suspend.target.wants/[m
+systemctl [36m--user[m [36mstart[m [36mrclone-onedrive-resume.service[m
+systemctl [36m--user[m [36mstart[m [36mrclone-onedrive-resume-listener.service[m
+rm [96m~[36m/.config/systemd/user/rclone-onedrive-resume.path[m
+systemctl [36m--user[m [36menable[m [36m--now[m [36mrclone-onedrive-resume-listener.service[m
+nano [96m~[36m/.config/systemd/user/rclone-onedrive-resume-listener.service[m
+nano [96m~[36m/.config/systemd/user/rclone-onedrive-resume.service[m
+systemctl [36m--user[m [36mstatus[m [36mrclone-onedrive-resume.service[m
+systemctl [36m--user[m [36menable[m [36m--now[m [36mrclone-onedrive-resume.service[m
+systemctl [36m--user[m [36menable[m [36mrclone-onedrive-resume.service[m
+systemctl [36m--user[m [36menable[m [36m--now[m [36mrclone-onedrive-network.path[m
+nano [96m~[36m/.config/systemd/user/rclone-onedrive-network.service[m
+nano [96m~[36m/.config/systemd/user/rclone-onedrive-network.path[m
+mkdir [36m-p[m [96m~[36m/onedrive[m
+/bin/fusermount3 [36m-u[m [96m~[36m/onedrive[m
+/bin/fusermount3 [36m-u[m [36m%h/onedrive[m
+systemctl [36m--user[m [36menable[m [36m--now[m [36mrclone-onedrive.service[m
+mkdir [96m~[36m/onedrive[m
+mount [32m|[m grep [36monedrive[m
+fusermount3 [36m-u[m [96m~[36m/onedrive[m
+ps [36maux[m [32m|[m grep [36mrclone[m
+rclone [36mmount[m [36monedrive:[m [96m~[36m/onedrive[m [36m--vfs-cache-mode[m [36mfull[m [36m--dir-cache-time[m [36m12h[m [36m--poll-interval[m [36m1m[m
+sudo [36mzypper[m [36minstall[m [36mrclone[m
+onedrive [36m--display-config[m [32m|[m grep [36m-i[m [36mfuse[m
+onedrive [36m--version[m
+onedrive [36m-h[m
+onedrive [36m--mount[m [36m--mount-dir[m [96m~[36m/onedrive/[m
+onedrive
+sudo [36mzypper[m [36minstall[m [36monedrive[m
+flatpak [36mrun[m [36morg.cryptomator.Cryptomator[m
+sudo [36mchown[m [36m-R[m [96m$USER[36m:[96m$USER[m [96m~[36m/.local/share/Cryptomator[m
+sudo [36mchown[m [36m-R[m [96m$USER[36m:[96m$USER[m [96m~[36m/.config/Cryptomator[m
+sudo [36mchown[m [36m-R[m [96m$USER[36m:[96m$USER[m [96m~[36m/.var/app/org.cryptomator.Cryptomator[m
+flatpak [36minstall[m [36mflathub[m [36morg.cryptomator.Cryptomator[m
+flatpak [36muninstall[m [36morg.cryptomator.Cryptomator[m
+cryptomator
+flatpak [36m--version[m
+sudo [36mzypper[m [36min[m [36m-f[m [36mflatpak[m
+which [36mflatpak[m
+journalctl [36m--user[m [36m-b[m [32m|[m grep [36m-i[m [36mflatpak[m
+flatpak [36mrepair[m
+rm [36m-rf[m [96m~[36m/.cache/flatpak[m
+rm [36m-rf[m [96m~[36m/.var/app/[96m*[36m/.cache/[96m*[m
+killall [36m-9[m [36mjava[m
+killall [36m-9[m [36mxdg-dbus-proxy[m
+killall [36m-9[m [36mbwrap[m
+killall [36m-9[m [36mflatpak[m
+systemctl [36m--user[m [36mstatus[m [36mflatpak-session-helper.service[m
+systemctl [36m--user[m [36mrestart[m [36mflatpak-session-helper.service[m
+flatpak
+flatpak [36mversion[m
+systemctl [36m--user[m [32m|[m grep [36mflatpak[m
+journalctl [36m--user[m [36m-b[m [32m|[m grep [36m-i[m [36mcryptomator[m
+sudo [36mkillall[m [36m-9[m [36mflatpak[m
+sudo [36mkill[m [36m-9[m [36m4188[m
+ps [36maux[m [32m|[m grep [36mflatpak[m
+sudo [36mkill[m [36m-9[m [36m8956[m
+sudo [36mkill[m [36m-9[m [36m306792[m
+sudo [36mkill[m [36m-9[m [36m4184[m
+sudo [36mkill[m [36m-9[m [36m6692[m
+flatpak [36mkill[m [36morg.cryptomator.Cryptomator[m
+pkill [36m-9[m [36mjava[m
+killall [36m-9[m [36mbwrap[m [36mxdg-dbus-proxy[m
+ps [36maux[m [32m|[m grep [36m-i[m [36mcryptomator[m
+killall [36m-n9[m [36mjava[m
+ls [36m-l[m [96m~[36m/.var/app/org.cryptomator.Cryptomator[m
+killall [36mcryptomator[m
+flatpak [36mrun[m [36morg.cryptomator.Cryptomator[m [36m--verbose[m [36;1m2>&1[m [32m|[m tee [96m~[36m/cryptomator.log[m
+echo [96m$status[m
+sudo [36mnano[m [36m/usr/local/bin/cryptomator[m
+sudo [36mchmod[m [36m+x[m [36m/usr/local/bin/cryptomator[m
+echo [33m'exec flatpak run org.cryptomator.Cryptomator "$@"'[m [32m|[m sudo [36mtee[m [36m-a[m [36m/usr/local/bin/cryptomator[m [36;1m>/dev/null[m
+echo [33m'#!/bin/sh'[m [32m|[m sudo [36mtee[m [36m/usr/local/bin/cryptomator[m [36;1m>/dev/null[m
+nano [36m/usr/local/bin/cryptomator[m
+sudo [36mln[m [36m-s[m [36m/usr/bin/flatpak[m [36m/usr/local/bin/cryptomator[m
+locale
+chmod [36m+x[m [36morcaslicer.sh[m
+cd [96m~[36m?[m
+echo [36mWEBKIT_DISABLE_DMABUF_RENDERER=1[m [36m/home/gddrx/bin/orcaslicer/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.3.1.AppImage[m [36;1m>[m [36;1morcaslicer.sh[m
+[36mWEBKIT_DISABLE_DMABUF_RENDERER[96m=[36m1[m /home/gddrx/bin/orcaslicer/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.3.1.AppImage [36;1m>[m [36;1morcaslicer.sh[m
+[36mWEBKIT_DISABLE_DMABUF_RENDERER[96m=[36m1[m /home/gddrx/bin/orcaslicer/OrcaSlicer_Linux_AppImage_Ubuntu2404_V2.3.1.AppImage
+gdu [36m-d[m
+gdu [96m~[36m/bin/[m
+gdu
+cd [36m/mnt/d[m
+cd [36m/[m
+grep [36m-R[m [33m"IBUS"[m [96m~[36m/.profile[m [96m~[36m/.bashrc[m [96m~[36m/.pam_environment[m [96m~[36m/.xprofile[m
+sudo [36mzypper[m [36min[m [36m./zoom_openSUSE_x86_64.rpm[m
+sudo [36mrpm[m [36m--import[m [36mzoom-key.pub[m
+wget [36m-O[m [36mzoom-key.pub[m [36mhttps://zoom.us/linux/download/pubkey[m
+sudo [36mbtrfs[m [36mscrub[m [36mstart[m [36m-B[m [36m/[m
+sudo [36mbtrfs[m [36mscrub[m [36mstart[m [36m--readonly[m [36m-B[m [36m/[m
+sudo [36msystemctl[m [36medit[m [36msddm.service[m
+sudo [36mnano[m [36m/etc/systemd/system/sddm.service.d/override.conf[m
+nano [36m/etc/systemd/system/sddm.service.d/override.conf[m
+sudo [36msystemctl[m [36mrestart[m [36msddm[m
+systemctl [36mcat[m [36msddm.service[m
+loginctl [36mshow-session[m [96m$([mloginctl [32m|[m grep [36mseat0[m [32m|[m awk [33m'{print $1}'[96m)[m [36m-p[m [36mType[m
+sudo [36mnano[m [36m/etc/sddm.conf.d/hidpi.conf[m
+sudo [36mnano[m [36m/etc/sddm.conf.d/kde_settings.conf[m
+nano [36m/etc/sddm.conf.d/kde_settings.conf[m
+bat [36m/etc/sddm.conf.d/kde_settings.conf[m
+bat [36m/etc/sddm.conf[m
+kwin_wayland [36m--replace[m
+export [36mKWIN_DRM_USE_EXPLICIT_SYNC=1[m
+ps [36m-e[m [32m|[m grep [36mtelegram[m
+chmod [36m+x[m [36mvpn.sh[m
+nano [96m~[36m/bin/runscpts/vpn.sh[m
+vopono [36mexec[m [36m--protocol[m [36mwireguard[m [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m [36m--custom-port-forwarding[m [36mprotonvpn[m [36mqbittorrent[m
+sudo [36mzypper[m [36minstall[m [36mqbittorrent[m
+vopono [36mexec[m \
+  [36m--protocol[m [36mwireguard[m \
+  [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m \
+  [36m--custom-port-forwarding[m [36mprotonvpn[m \
+  [36mnc[m [36m--[m [36m-l[m [36m0.0.0.0[m [36m12345[m
+vopono [36mexec[m \
+  [36m--protocol[m [36mwireguard[m \
+  [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m \
+  [36m--custom-port-forwarding[m [36mprotonvpn[m \
+  [36mnc[m [36m-[m [36m--l[m [36m0.0.0.0[m [36m12345[m
+vopono [36mexec[m \
+  [36m--protocol[m [36mwireguard[m \
+  [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m \
+  [36m--custom-port-forwarding[m [36mprotonvpn[m \
+  [36mnc[m [36m--l[m [36m0.0.0.0[m [36m12345[m
+vopono [36mexec[m \
+  [36m--protocol[m [36mwireguard[m \
+  [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m \
+  [36m--custom-port-forwarding[m [36mprotonvpn[m \
+  [36mnc[m [36m-l[m [36m0.0.0.0[m [36m12345[m
+vopono [36mexec[m [36m--protocol[m [36mwireguard[m [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m [36m--custom-port-forwarding[m [36mprotonvpn[m [36mfirefox[m
+opi [36mlibnatpmp[m
+opi [36mnatpmpc[m
+sudo [36mzypper[m [36minstall[m [36mnatpmpc[m
+sudo [36mzypper[m [36minstall[m [36mlibnatpmp[m
+wg [36mshow[m
+ip [36mnetns[m [36mlist[m
+vopono [36mexec[m [36m--protocol[m [36mwireguard[m [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m [36mfirefox[m
+vopono [36m--version[m
+vopono [36mexec[m [36m--protocol[m [36mwireguard[m [36m--config[m [36m/home/gddrx/documents/wg1.conf[m [36mfirefox[m
+vopono [36m--provider[m [36mcustom[m [36m--custom[m [36m/home/gddrx/documents/wg1.conf[m [36mfirefox[m
+cd [36mdocuments/[m
+vopono [36msync[m
+opi [36mvopono[m
+sudo [36mzypper[m [36mse[m [36mvopono[m
+sudo [36mnft[m [36mlist[m [36mruleset[m
+sudo [36mnft[m [36mflush[m [36mruleset[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-L[m [36m-n[m [36m-v[m
+ip [36mlink[m [32m|[m grep [36mwg[m
+ip [36mlink[m [32m|[m grep [36mveth[m
+sudo [36mrm[m [36m-rf[m [36m/run/netns/proton-runtime[m [36;1m2>/dev/null[m
+sudo [36mumount[m [36m-l[m [36m/run/netns/proton-runtime[m [36;1m2>/dev/null[m
+sudo [36msystemctl[m [36mstart[m [36mfirewalld[m
+sudo [36msysctl[m [36m--system[m
+sudo [36mrm[m [36m-f[m [36m/etc/sysctl.d/99-ipforward.conf[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-X[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-F[m
+sudo [36mip[m [36mlink[m [36mdelete[m [36mwg0[m [36;1m2>/dev/null[m
+sudo [36mwg-quick[m [36mdown[m [36mwg0[m [36;1m2>/dev/null[m
+sudo [36mip[m [36mlink[m [36mdelete[m [36mveth-ns[m [36;1m2>/dev/null[m
+sudo [36mip[m [36mlink[m [36mdelete[m [36mveth-host[m [36;1m2>/dev/null[m
+sudo [36mip[m [36mnetns[m [36mdelete[m [36mproton[m [36;1m2>/dev/null[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-L[m [36mPOSTROUTING[m [36m-n[m [36m-v[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-D[m [36mPOSTROUTING[m [36m-s[m [36m10.200.0.0/24[m [36m-j[m [36mMASQUERADE[m [36;1m2>/dev/null[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-D[m [36mPOSTROUTING[m [36m-s[m [36m10.200.0.0/24[m [36m-o[m [36mwlp69s0[m [36m-j[m [36mMASQUERADE[m [36;1m2>/dev/null[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mping[m [36m-c1[m [36m1.1.1.1[m
+sudo [36msystemctl[m [36mstop[m [36mfirewalld[m
+sudo [36mnft[m [36mlist[m [36mchain[m [36minet[m [36mfirewalld[m [36mfilter_FORWARD_POLICIES[m
+sudo [36mnft[m [36madd[m [36mrule[m [36minet[m [36mfirewalld[m [36mfilter_FORWARD_POLICIES[m [36moifname[m [33m"veth-host"[m [36maccept[m
+sudo [36mnft[m [36madd[m [36mrule[m [36minet[m [36mfirewalld[m [36mfilter_FORWARD_POLICIES[m [36miifname[m [33m"veth-host"[m [36maccept[m
+sudo [36mnft[m [36mlist[m [36mchain[m [36minet[m [36mfirewalld[m [36mfilter_FORWARD[m
+sudo [36mnft[m [36madd[m [36mrule[m [36minet[m [36mfirewalld[m [36mfilter_FORWARD[m [36moifname[m [33m"veth-host"[m [36maccept[m
+sudo [36mnft[m [36madd[m [36mrule[m [36minet[m [36mfirewalld[m [36mfilter_FORWARD[m [36miifname[m [33m"veth-host"[m [36maccept[m
+cat [36m/proc/sys/net/ipv4/ip_forward[m
+sudo [36mnft[m [36mlist[m [36mchain[m [36minet[m [36mfilter[m [36mforward[m
+sudo [36msysctl[m [36m-w[m [36mnet.ipv4.ip_forward=1[m
+sudo [36mnft[m [36mlist[m [36mtable[m [36mip[m [36mnat[m
+sudo [36mnft[m [36madd[m [36mrule[m [36mip[m [36mnat[m [36mpostrouting[m [36mip[m [36msaddr[m [36m10.200.0.0/24[m [36moif[m [36mwlp69s0[m [36mmasquerade[m
+sudo [36mnft[m [36madd[m [36mchain[m [36mip[m [36mnat[m [36mpostrouting[m [33m'{ type nat hook postrouting priority 100 ; }'[m
+sudo [36mnft[m [36madd[m [36mtable[m [36mip[m [36mnat[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mping[m [36m-c1[m [36m10.200.0.1[m
+sudo [36mtcpdump[m [36m-i[m [36mveth-host[m [36m-n[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mip[m [36mroute[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mtraceroute[m [36m-n[m [36m1.1.1.1[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mip[m [36mroute[m [36madd[m [36mdefault[m [36mvia[m [36m10.200.0.1[m [36mdev[m [36mveth-ns[m
+ip [36mlink[m [36mshow[m [36mveth-host[m
+ip [36mroute[m [36mshow[m
+sudo [36miptables[m [36m-t[m [36mnat[m [36m-L[m [36mPOSTROUTING[m [36m-n[m [36m-v[m [32m|[m grep [36m10.200.0.0[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mip[m [36ma[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mcat[m [36m/etc/resolv.conf[m
+[96m~[m/vpn-proton-run [36mcurl[m [36mhttps://ifconfig.me[m
+nano [96m~[36m/vpn-proton-run[m
+[96m~[m/vpn-proton-run [36mfirefox[m
+chmod [36m+x[m [36mvpn-proton-run[m
+ip [36mlink[m [36mshow[m [36mwg0[m
+mount [32m|[m grep [36muser/1000[m
+mount [32m|[m grep [36mnetns[m
+ps [36m-ef[m [32m|[m grep [36munshare[m
+sudo [36mrmdir[m [36m/run/netns/proton-runtime[m [36;1m2>/dev/null[m
+sudo [36mumount[m [36m-l[m [36m/run/user/1000/pipewire-0[m [36;1m2>/dev/null[m
+sudo [36mumount[m [36m-l[m [36m/run/user/1000/bus[m [36;1m2>/dev/null[m
+sudo [36mumount[m [36m-l[m [36m/run/user/1000/wayland-0[m [36;1m2>/dev/null[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mping[m [36m-c1[m [36m10.2.0.1[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mip[m [36mroute[m [36mshow[m [36mtable[m [36m51820[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mip[m [36ma[m [36mshow[m [36mwg0[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mwg-quick[m [36mup[m [36mwg0[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mip[m [36mlink[m [36mset[m [36mlo[m [36mup[m
+sudo [36mip[m [36mnetns[m [36madd[m [36mproton[m
+mount [32m|[m grep [36mns[m
+mount [32m|[m grep [36mrun/user/1000[m
+sudo [36mip[m [36mnetns[m [36mdelete[m [36mproton[m
+sudo [36munshare[m [36m--user[m [36m--map-root-user[m [36m--net[m [36mbash[m
+sudo [36munshare[m [36m--user[m [36m--map-root-user[m [36m--net[m [36m--mount-proc[m [36mbash[m
+mount [32m|[m grep [36mproton[m
+sudo [36mrmdir[m [36m/run/netns/proton-runtime[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mrmdir[m [36m/run/user/1000[m
+sudo [36mmount[m [36m--bind[m [36m/run/user/1000[m [36m/run/netns/proton-runtime[m
+sudo [36mumount[m [36m/run/user/1000/pipewire-0[m
+sudo [36mumount[m [36m/run/user/1000/bus[m
+sudo [36mumount[m [36m/run/user/1000/wayland-0[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mls[m [36m-l[m [36m/run/user/1000/[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36menv[m [36mWAYLAND_DISPLAY=[96m$WAYLAND_DISPLAY[m [36mXDG_RUNTIME_DIR=/run/user/1000[m [36mDBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus[m [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m [36mfirefox[m
+ls [36m/run/user/1000[m [32m|[m grep [36mpipewire[m
+sudo [36mmount[m [36m--bind[m [36m/run/user/1000/pipewire-0[m [36m/run/user/1000/pipewire-0[m
+sudo [36mmount[m [36m--bind[m [36m/run/user/1000/bus[m [36m/run/user/1000/bus[m
+sudo [36mmount[m [36m--bind[m [36m/run/user/1000/wayland-0[m [36m/run/user/1000/wayland-0[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mmkdir[m [36m-p[m [36m/run/user/1000[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36menv[m [36mWAYLAND_DISPLAY=[96m$WAYLAND_DISPLAY[m [36mXDG_RUNTIME_DIR=/run/user/1000[m [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m [36mfirefox[m
+sudo [36mrm[m [36m/run/netns/proton-runtime[m
+ls [36m/run/user/1000/[m
+sudo [36mumount[m [36m/run/netns/proton-runtime[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36menv[m [36mWAYLAND_DISPLAY=[96m$WAYLAND_DISPLAY[m [36mXDG_RUNTIME_DIR=/run/netns/proton-runtime[m [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m [36mfirefox[m
+sudo [36mmkdir[m [36m-p[m [36m/run/netns/proton-runtime[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36menv[m [36mWAYLAND_DISPLAY=[96m$WAYLAND_DISPLAY[m [36mXDG_RUNTIME_DIR=[96m$XDG_RUNTIME_DIR[m [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m [36mfirefox[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m \
+  [36menv[m [36mWAYLAND_DISPLAY=[96m$WAYLAND_DISPLAY[m [36mXDG_RUNTIME_DIR=[96m$XDG_RUNTIME_DIR[m \
+  [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m \
+  [36mfirefox[m
+echo [96m$WAYLAND_DISPLAY[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m [36mfirefox[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36msetpriv[m [36m--reuid=[96m$([mid [36m-u[96m)[m [36m--regid=[96m$([mid [36m-g[96m)[m [36m--clear-groups[m [36mid[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36msudo[m [36m-u[m [36mgddrx[m [36mfirefox[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36msudo[m [36m-u[m [36mgddrx[m [36mid[m
+sudo [36mip[m [36mnetns[m [36mexec[m [36mproton[m [36mid[m
+sudo [36mzypper[m [36min[m [36mwireguard-tools[m
+nmcli [36mconnection[m [36mimport[m [36mtype[m [36mwireguard[m [36mfile[m [96m~[36m/downloads/wg0.conf[m
+nmcli [36mconnection[m [36mimport[m [36mtype[m [36mwireguard[m [36mfile[m [96m~[36m/downloads/GDDRX_Opensuse-DE-18.conf[m
+sudo [36mzypper[m [36min[m [36mprotonvpn-gui[m
+echo [36mpzd[m [32m|[m nc [36mtermbin.com[m [36m9999[m
+df [36m-h[m [32m|[m susepaste
+sudo [36mlsblk[m [36m-f[m
+sudo [36mlsblk[m [36m--output-all[m
+sudo [36mlsblk[m [36m--output-all[m [36m--fs[m
+sudo [36mlsblk[m [36m-f[m [36m-O[m
+sudo [36mlsblk[m [36m-f[m [36m-o[m
+sudo [36mlsblk[m [36m--help[m
+sudo [36mtree[m [36m/boot/efi[m [32m|[m susepaste
+rpm [36m-qa[m [36mkernel-default[m [32m|[m susepaste
+ncdu [36m-x[m [36m/boot/efi[m
+sudo [36mtree[m [36m/boot/efi[m
+tree [36m/boot/efi[m
+sudo [36mzypper[m [36mpurge-kernels[m
+sudo [36mzypper[m [36mse[m [36mpurge-kernels[m
+sudo [36mpurge-kernels[m
+kcmshell6 [36mkwincompositing[m
+sh [36m./honeygain.sh[m
+cd [36mhe[m
+nano [96m~[36m/.config/fish/config.fish[m
+ls [36m-R[m [36m/sys/class/nvme[m
+cat [36m/sys/class/nvme/nvme0/device/temp1_input[m
+lsblk
+sudo [36mzypper[m [36minstall[m [36mnvme-cli[m
+set [36m-U[m [36mfish_greeting[m [96m([mprintf [33m"🐧 %s | Kernel %s | %s"[m [96m([mdate [33m"+%H:%M:%S"[96m)[m [96m([muname [36m-r[96m)[m [96m([msensors [32m|[m grep [33m'Tctl'[m [32m|[m awk [33m'{print $2}'[96m))[m
+bat [36mhoneygain.sh[m
+cat [36mgrass.sh[m
+bat [36mgrass.sh[m
+sudo [36mzypper[m [36min[m [36mbat[m
+sudo [36mzypper[m [36min[m [36mbatcat[m
+set [36m-U[m [36mfish_history_merge[m [36m1[m
+set [36m-U[m [36mfish_color_error[m [36mred[m
+sudo [36mzypper[m [36minstall[m [36mfont-nerd-fira-code[m
+sudo [36mzypper[m [36minstall[m [36mfont-nerd-jetbrainsmono[m
+fisher [36minstall[m [36mIlanCosman/tide@v6[m
+fisher [36minstall[m [36mjorgebucaran/fish-bax[m
+fisher [36minstall[m [36mjorgebucaran/autopair.fish[m
+fisher [36minstall[m [36mjethrokuan/z[m
+fisher [36minstall[m [36mPatrickF1/fzf.fish[m
+sudo [36mzypper[m [36minstall[m [36mfzf[m
+curl [36m-sL[m [36mhttps://git.io/fisher[m [32m|[m source [96m&&[m fisher [36minstall[m [36mjorgebucaran/fisher[m
+grep [36mgddrx[m [36m/etc/passwd[m
+echo [96m$SHELL[m
+chsh [36m-s[m [36m/usr/bin/fish[m
+ls [96m~[36m/[m
+golemsp [36mstatus[m
+docker [36mrun[m [36m--gpus[m [36mall[m [36m--ipc=host[m [36m--net=host[m   [36m-v[m [36m/var/run/docker.sock:/var/run/docker.sock[m   [36m-v[m [36m/mnt/d/bin/vastai/:/vastai[m   [36mvastai/host:latest[m   [36m--api-key[m [36m7aecb5bea29e04988fc87a26865c8eee6ebfae779ae6996180ade456eb7a09f6[m   [36m--label[m [36mfearless[m
+npm [36mls[m [36m-g[m [32m|[m grep [36mgvmkit[m
+pip [36mlist[m [32m|[m grep [36mgvmkit[m
+rm [36m-r[m [96m~[36m/.local/lib/yagna[m
+echo [96m$EXE_UNIT_PATH[m
+rm [36m-r[m [96m~[36m/.local/share/ya-provider[m
+echo [96m$DATADIR[m
+rm [36m-r[m [96m~[36m/.local/share/ya-installer[m
+rm [36m-r[m [96m~[36m/.local/share/yagna[m
+echo [96m$YAGNA_DATADIR[m
+rm [96m~[36m/.local/bin/yagna[m [96m&&[m rm [96m~[36m/.local/bin/golemsp[m [96m&&[m rm [96m~[36m/.local/bin/ya-provider[m
+rm [36m-rf[m [96m~[36m/.local/lib/yagna[m
+rm [36m-rf[m [96m~[36m/.local/share/ya-provider[m
+rm [36m-rf[m [96m~[36m/.local/share/ya-installer[m
+rm [36m-rf[m [96m~[36m/.local/share/yagna[m
+rm [96m~[36m/.local/bin/ya-provider[m
+rm [96m~[36m/.local/bin/golemsp[m
+rm [96m~[36m/.local/bin/yagna[m
+golemsp [36mrun[m
+golemsp [36msettings[m [36mshow[m
+golemsp [36msettings[m [36mset[m [36m--env-per-hour[m [36m0[m
+golemsp [36msettings[m [36mset[m [36m--cpu-per-hour[m [36m0.005[m
+golemsp [36msettings[m [36mset[m [36m--disk[m [36m64GiB[m
+golemsp [36mconsent[m [36mshow[m
+golemsp [36mconsent[m [36mallow[m [36mhelp[m
+golemsp [36mconsent[m [36mallow[m
+golemsp [36mconsent[m
+golemsp [36mhelp[m
+golemsp [36msettings[m [36mhelp[m
+golemsp [36msettings[m
+golemsp [36msettings[m [36mset[m [36m--memory[m [36m64.00GiB[m
+golemsp [36msettings[m [36mset[m [36m--memory[m [36m64.00[m [36mGiB[m
+golemsp [36msettings[m [36mset[m [36m--memory[m [36m64[m
+golemsp [36msettings[m [36mset[m [36m--cores[m [36m24[m
+curl [36m-sSf[m [36mhttps://join.golem.network/as-provider[m [32m|[m bash [36m-[m
+cd [36mgolem/[m
+cd [36mgol[m
+mkdir [36mgolem[m
+./golemsp
+echo [33m"ls /"[m
+echo [36mls[m [36m/[m
+echo [36mls[m
+cd [36mrunscpts/[m
+./grass
+cd [36mgrass/[m
+cd [36mbin/xdagminer/[m
+cpupower
+watch [36m-n[m [36m0.3[m [36mcat[m [36m/proc/cpuinfo[m
+watch [36m-n[m [36m0.1[m [36mcat[m [36m/proc/cpuinfo[m
+watch [36m-n[m [36m1[m [36mcat[m [36m/proc/cpuinfo[m
+nmtui
+./zp.sh
+zypper [36mlr[m [36m-u[m
+bat [36m--help[m
+nano [36mzp.sh[m
+chmod [36m+x[m [36mzp.sh[m
+cpupower [36mmonitor[m
+grep [36mHuge[m [36m/proc/meminfo[m
+chmod [36m+x[m [36mxmrig[m
+sudo [36msmartctl[m [36m/dev/sda[m
+sudo [36msmartctl[m
+sudo [36mzypper[m [36mrefresh[m
+sudo [36mzypper[m [36min[m [36msusepaste[m
+sudo [36mcompsize[m [36m-x[m [36m/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdefragment[m [36m-v[m [36m-r[m [36m/[m
+sudo [36mbtrfs[m [36mbalance[m [36mstatus[m [36m/[m
+sudo [36mbtrfs[m [36mbalance[m [36mstart[m [36m-dusage=75[m [36m/[m
+sudo [36mbtrfs[m [36mbalance[m [36mstart[m [36m-dusage=5[m [36m/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdefragment[m [36m-r[m [36m-v[m [36m-czstd[m [36m-L[m [36m3[m [36m/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdefragment[m [36m-r[m [36m-v[m [36m-czstd[m [36m-L[m [36m5[m [36m/home[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdefragment[m [36m-r[m [36m-v[m [36m-czstd[m [36m-l[m [36m3[m [36m/[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdefragment[m [36m-r[m [36m-v[m [36m-czstd[m [36m-l[m [36m5[m [36m/home[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdefragment[m [36m-r[m [36m-v[m [36m-czstd:5[m [36m/home[m
+sudo [36mzypper[m [36min[m [36mcompsize[m
+mount [32m|[m grep [36mbtrfs[m
+./Steam.dll
+findmnt [36m-no[m [36mTARGET,OPTIONS[m [32m|[m grep [36mbtrfs[m
+sudo [36mmount[m [36m-a[m
+cat [36m/etc/fstab[m
+sudo [36mnano[m [36m/etc/fstab[m
+lscpu
+sudo [36msnapper[m [36mdelete[m [36m--sync[m [36m--older-than[m [36m7d[m
+sudo [36msnapper[m [36mdelete[m [36m--sync[m [36m--timeline[m [36m--older-than[m [36m7d[m
+sudo [36mbtrfs[m [36minspect-internal[m [36mdump-super[m [36m/dev/nvme0n1p2[m [32m|[m grep [36m-i[m [36mspace_cache[m
+sudo [36mbtrfs[m [36minspect-internal[m [36mdump-super[m [36m/dev/nvme1n1p2[m [32m|[m grep [36m-i[m [36mspace_cache[m
+sudo [36mbtrfs[m [36minspect-internal[m [36mdump-super[m [36m/dev/nvme1n1pX[m [32m|[m grep [36m-i[m [36mspace_cache[m
+sudo [36mbtrfs[m [36minspect-internal[m [36mdump-super[m [36m/dev/nvme0n1pX[m [32m|[m grep [36m-i[m [36mspace_cache[m
+sudo [36mbtrfs[m [36mproperty[m [36mget[m [36m/[m [36mcompression[m
+sudo [36mbtrfs[m [36mfilesystem[m [36mdf[m [36m/[m
+sudo [36mbtrfs[m [36msubvolume[m [36mlist[m [36m/[m
+cat [36m/proc/cpuinfo[m [32m|[m grep [33m"model name"[m [32m|[m head [36m-1[m
+sudo [36mblockdev[m [36m--getra[m [36m/dev/nvme0n1[m
+blockdev [36m--getra[m [36m/dev/nvme0n1[m
+sudo [36mtree[m [36m-L[m [36m2[m [36m/boot/efi/EFI[m
+tree [36m-L[m [36m2[m [36m/boot/efi/[m
+tree [36m-L[m [36m2[m [36m/boot/efi/EFI[m
+sudo [36mrmdir[m [36m/mnt/win-esp[m [36;1m2>/dev/null[m
+sudo [36mumount[m [36m/mnt/win-esp[m [36;1m2>/dev/null[m
+sudo [36mrm[m [36m-r[m [36m/boot/efi/EFI/Microsoft[m
+sudo [36mrm[m [36m/boot/efi/loader/entries/windows.conf[m
+sudo [36mrm[m [36m/boot/efi/loader/entries/00-windows.conf[m
+sudo [36mmv[m [36m/boot/efi/loader/entries/windows.conf[m [36m/boot/efi/loader/entries/00-windows.conf[m
+cat [36m/sys/module/nvme_core/parameters/io_timeout[m
+cat [36m/sys/module/nvme_core/parameters/default_ps_max_latency_us[m
+sudo [36mupdate-bootloader[m
+systemctl [36menable[m [36m--now[m [36mcockpit.socket[m
+sudo [36mls[m [36m/boot/loader/entries/[m
+ls [36m/boot/loader/entries/[m
+sudo [36mnano[m [36m/etc/default/grub[m
+nano [36m/etc/default/grub[m
+cat [36m/sys/block/nvme1n1/queue/scheduler[m
+cat [36m/sys/block/nvme0n1/queue/scheduler[m
+[32m;[ms
+fc-match [33m"Segoe UI"[m
+google-chrome-stable [36m--version[m
+fc-list [32m|[m grep [36m-i[m [33m"segoe"[m
+fc-cache [36m-fv[m
+mkdir [36m-p[m [96m~[36m/.local/share/fonts/windows[m
+sudo [36mzypper[m [36minstall[m [36mveracrypt[m
+sudo [36mzypper[m [36maddrepo[m [36mhttps://download.opensuse.org/repositories/security/openSUSE_Tumbleweed/security.repo[m
+journalctl [36m-xe[m [32m|[m grep [36mfont[m
+sudo [36mzypper[m [36msearch[m [36mmaterial-icons[m
+opi [36mgoogle-material-icons[m
+sudo [36mzypper[m [36minstall[m [36mfontawesome-fonts[m
+opi [36mmaterial-design[m
+opi [36mmaterial-design-icons-fonts[m
+sudo [36mzypper[m [36minstall[m [36mliberation-fonts[m
+opi [36mroboto-fonts[m
+sudo [36mzypper[m [36minstall[m [36mroboto-fonts[m
+sudo [36mzypper[m [36minstall[m [36mmaterial-design-icons-fonts[m
+nano [36mgrass.sh[m
+nano [36mhoneygain.sh[m
+sudo [36mzypper[m [36minstall[m [36mfontawesome-fonts[m [36mgoogle-material-design-icons[m
+sudo [36mzypper[m [36minstall[m [36m--force[m [36mfontconfig[m
+sudo [36mzypper[m [36minstall[m [36mgoogle-noto-sans-fonts[m [36mgoogle-noto-emoji-fonts[m [36mgoogle-noto-symbols-fonts[m
+sudo [36mzypper[m [36minstall[m [36mnoto-fonts[m [36mnoto-color-emoji[m [36mfontawesome-fonts[m [36mgoogle-material-design-icons[m
+fc-list [32m|[m grep [36m-i[m [36mnoto[m
+sudo [36mfc-cache[m [36m-fv[m
+sudo [36mjournalctl[m [36m-xe[m [32m|[m grep [36mfont[m
+docker [36mrun[m [36mhoneygain/honeygain[m [36m-tou-get[m
+docker [36mrun[m [36mhello-world[m
+sudo [36musermod[m [36m-aG[m [36mdocker[m [96m$USER[m
+sudo [36msystemctl[m [36mstatus[m [36mdocker[m
+sudo [36msystemctl[m [36menable[m [36m--now[m [36mdocker[m
+sudo [36mzypper[m [36minstall[m [36mdocker[m
+sudo [36mbash[m [36m/tmp/earnapp.sh[m
+wget [36m-qO-[m [36mhttps://brightdata.com/static/earnapp/install.sh[m [36;1m>[m [36;1m/tmp/earnapp.sh[m
+sudo [36mcp[m [36mlibdeep_filter_ladspa-0.5.6-x86_64-unknown-linux-gnu.so[m [36m/usr/lib64/ladspa/libdeep_filter_ladspa.so[m
+sudo [36mmkdir[m [36m/usr/lib64/ladspa/[m
+ls [36m/usr/lib64/lv2/[m
+ls [36m/usr/lib64/[m
+ls [36m/usr/lib64/ladspa[m
+ls [36m/usr/lib64/ladspa/[m
+/usr/lib64/ladspa/
+flatpak [36mlist[m [32m|[m grep [36m-i[m [36measyeffects[m
+systemctl [36m--user[m [36mrestart[m [36mpipewire[m [36mpipewire-pulse[m [36mwireplumber[m
+sudo [36mzypper[m [36minstall[m [36mlsp-plugins-lv2[m
+sudo [36mzypper[m [36minstall[m [36mlv2-calf[m
+zypper [36mse[m [36m-s[m [36mcalf[m
+rpm [36m-ql[m [36mcalf[m [32m|[m grep [36mlv2[m
+rm [36m-rf[m [96m~[36m/.lv2[m
+rm [36m-rf[m [96m~[36m/.cache/lv2[m
+rm [36m-rf[m [96m~[36m/.cache/easyeffects[m
+ls [36m/usr/lib64/lv2[m [32m|[m grep [36m-E[m [33m"mda|calf"[m
+sudo [36mzypper[m [36minstall[m [36mcalf[m
+systemctl [36m--user[m [36mrestart[m [36measyeffects[m
+sudo [36mzypper[m [36minstall[m [36mmda-lv2[m
+sudo [36mzypper[m [36minstall[m [36measyeffects[m
+sudo [36mzypper[m [36maddrepo[m [36mhttps://download.opensuse.org/repositories/multimedia:apps/openSUSE_Tumbleweed/multimedia:apps.repo[m
+sudo [36mzypper[m [36maddrepo[m [36mhttps://download.opensuse.org/repositories/multimedia:apps/openSUSE_Tumbleweed/multimedia:apps.rep[m
+sudo [36mtree[m [36m-L[m [36m3[m [36m/boot/efi/EFI[m
+tree [36m-L[m [36m3[m [36m/boot/efi/EFI[m
+sudo [36mnano[m [36m/boot/efi/loader/entries/windows.conf[m
+sudo [36mls[m [36m/boot/efi/EFI/Microsoft/Boot/bootmgfw.efi[m
+ls [36m/boot/efi/EFI/Microsoft/Boot/bootmgfw.efi[m
+sudo [36mcp[m [36m-r[m [36m/mnt/win-esp/EFI/Microsoft/Boot[m [36m/boot/efi/EFI/Microsoft/[m
+sudo [36mmkdir[m [36m-p[m [36m/boot/efi/EFI/Microsoft[m
+ls [36m/mnt/win-esp/EFI/Microsoft/Boot/bootmgfw.efi[m
+sudo [36mmount[m [36m/dev/nvme1n1p1[m [36m/mnt/win-esp[m
+sudo [36mmkdir[m [36m-p[m [36m/mnt/win-esp[m
+systemctl [36m--user[m [36mstatus[m [36mpipewire[m [36mwireplumber[m
+systemctl [36m--user[m [36mrestart[m [36mpipewire[m [36mwireplumber[m
+[36mPIPEWIRE_DEBUG[96m=[36m4[m pipewire [36;1m2>&1[m [32m|[m tee [96m~[36m/pw.log[m
+systemctl [36m--user[m [36mstop[m [36mpipewire[m [36mwireplumber[m
+systemctl [36m--user[m [36mforce-stop[m [36mpipewire[m [36mpipewire-pulse[m [36mwireplumber[m
+systemctl [36m--user[m [36mforce[m [36mstop[m [36mpipewire[m [36mpipewire-pulse[m [36mwireplumber[m
+systemctl [36m--user[m [36mstop[m [36mforce[m [36mpipewire[m [36mpipewire-pulse[m [36mwireplumber[m
+systemctl [36m--user[m [36mstop[m [36mpipewire[m [36mpipewire-pulse[m [36mwireplumber[m
+pw-cli [36mls[m [36mDevice[m [32m|[m grep [36m-E[m [33m"ALC1220|USB|Realtek"[m
+systemctl [36m--user[m [36mstatus[m [36mpipewire[m
+systemctl [36m--user[m [36mstart[m [36mpipewire[m [36mwireplumber[m
+grep [36m-R[m [33m"filter-chain"[m [36m/etc/pipewire[m [36m/usr/share/pipewire[m [36;1m2>/dev/null[m
+journalctl [36m--user[m [36m-u[m [36mwireplumber[m [36m--since[m [33m"5 minutes ago"[m [32m|[m tail [36m-n[m [36m50[m
+journalctl [36m--user[m [36m-u[m [36mpipewire[m [36m--since[m [33m"5 minutes ago"[m [32m|[m tail [36m-n[m [36m50[m
+aplay [36m-l[m
+pw-cli [36mls[m [36mDevice[m [32m|[m grep [36m-E[m [33m"ALC1220|USB|Realtek"[m [36m-n[m
+nano [96m~[36m/.config/pipewire/pipewire.conf.d/40-force-format.conf[m
+rm [96m~[36m/.config/pipewire/pipewire.conf.d/40-force-format.conf[m
+rm [96m~[36m/.config/pipewire/pipewire.conf.d/20-no-suspend.conf[m
+rm [96m~[36m/.config/pipewire/pipewire.conf.d/10-rate.conf[m
+systemctl [36m--user[m [36mrestart[m [36mwireplumber[m [36mpipewire[m
+nano [96m~[36m/.config/wireplumber/wireplumber.conf.d/30-disable-portconfig.conf[m
+nano [96m~[36m/.config/pipewire/pipewire.conf.d/10-rate.conf[m
+nano [96m~[36m/.config/pipewire/pipewire.conf.d/20-no-suspend.conf[m
+mkdir [36m-p[m [96m~[36m/.config/pipewire/pipewire.conf.d/[m
+nano [96m~[36m/.config/wireplumber/wireplumber.conf.d/20-disable-port-switch.conf[m
+nano [96m~[36m/.config/wireplumber/wireplumber.conf.d[m
+nano [36mmonitor.alsa.rules[m [36m=[m [36m[[m
+mkdir [36m-p[m [96m~[36m/.config/wireplumber/wireplumber.conf.d[m
+pw-cli [36minfo[m [36m61[m
+pw-cli [36minfo[m [36m47[m
+pw-cli [36mls[m [36mNode[m [32m|[m grep [36m-E[m [33m"node.name|media.class"[m [36m-n[m
+pw-top
+mkdir [36m-p[m [96m~[36m/.config/pipewire/pipewire.conf.d[m
+«После [36mэтой[m [36mкоманды[m [36mчто‑то[m [36mпроизошло[m [36m/[m [36mне[m [36mпроизошло».[m
+speaker-test [36m-D[m [36mdefault[m [36m-c[m [36m2[m
+pw-cli [36mls[m [36mNode[m [32m|[m grep [36m-i[m [36maudio[m
+pw-metadata [36m-n[m [36msettings[m [36m0[m
+journalctl [36m--user[m [36m-u[m [36mpipewire[m [36m--since[m [33m"5 minutes ago"[m [32m|[m grep [36m-i[m [36mxrun[m
+sudo [36mzypper[m [36mupdate[m
+sudo [36mzypper[m [36minstall[m [36mpavucontrol[m
+nvidia-settings [36m-q[m [36mGPUPowerMizerMode[m
+cat [36m/sys/devices/system/cpu/cpu0/cpufreq/energy_performance_preference[m
+lscpu [32m|[m grep [36mModel[m
+cat [36m/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor[m
+cpupower [36mfrequency-info[m [32m|[m grep [33m"The governor"[m
+watch [36mcpupower[m [36mfrequency-info[m
+s-tui
+sudo [36mzypper[m [36minstall[m [36ms-tui[m
+sudo [36mzypper[m [36minstall[m [36mcpupower[m
+watch [36mlscpu[m [36m--extended[m
+grep [33m"cpu MHz"[m [36m/proc/cpuinfo[m
+watch [33m"grep "[36mcpu[m [36mMHz[33m" /proc/cpuinfo"[m
+watch [36mgrep[m [33m"cpu MHz"[m [36m/proc/cpuinfo[m
+lscpu [36m--extended[m
+mount [32m|[m grep [36m/mnt/d[m
+sudo [36mmount[m [36m-t[m [36mntfs3[m [36m/dev/sda1[m [36m/mnt/d[m
+sudo [36mdmesg[m [32m|[m grep [36m-i[m [36mntfs[m
+dmesg [32m|[m grep [36m-i[m [36mntfs[m
+lsmod [32m|[m grep [36mntfs[m
+sudo [36mmodprobe[m [36mntfs3[m
+ls [36m/lib/modules/[96m$([muname [36m-r[96m)[36m/kernel/fs/ntfs3/[m
+grep [36mNTFS3[m [36m/boot/config-[96m$([muname [36m-r[96m)[m
+sudo [36mmount[m [36m/mnt/d[m
+sudo [36mumount[m [36m/mnt/d[m
+sudo [36mlosetup[m [36m-d[m [36m/dev/loop0[m
+sudo [36mcryptsetup[m [36mclose[m [36mbackup_luks[m
+sudo [36mlvdisplay[m [32m|[m grep [33m"LV Status"[m
+sudo [36mlvchange[m [36m-an[m [36mgddrxdos-vg/swap_1[m
+sudo [36mlvchange[m [36m-an[m [36mgddrxdos-vg/root[m
+sudo [36mswapoff[m [36m/dev/mapper/gddrxdos--vg-swap_1[m
+mount [32m|[m grep [36mgddrxdos[m
+lsblk [36m-o[m [36mNAME,FSTYPE,MOUNTPOINT,SIZE,TYPE[m
+sudo [36mcryptsetup[m [36mstatus[m [36mbackup_luks[m
+sudo [36mumount[m [36m/mnt/debs[m
+sudo [36mlsof[m [36m+f[m [36m--[m [36m/mnt/d[m
+sudo [36mumount[m [36m/mnt/dsudo[m [36mlsof[m [36m+f[m [36m--[m [36m/mnt/d[m
+sudo [36mmount[m [36m-o[m [36mremount[m [36m/mnt/d[m
+lsb_release [36m-a[m
+sudo [36mzypper[m [36minstall[m [36mbrave-browser[m
+sudo [36mzypper[m [36maddrepo[m [36mhttps://brave-browser-rpm-release.s3.brave.com/brave-browser.repo[m
+sudo [36mzypper[m [36min[m [36mbrave[m
+sudo [36mzypper[m [36min[m [36mqbittorrent[m
+sudo [36mzypper[m [36min[m [36m./anydesk_7.1.2-1_x86_64.rpm[m
+sudo [36mzypper[m [36min[m [36m./vivaldi-stable-7.7.3851.66-1.x86_64.rpm[m
+sudo [36mmount[m [36m/dev/mapper/gddrxdos--vg-root[m [36m/mnt/debs/[m
+sudo [36mmount[m [36m/dev/mapper/gddrxdos--vg/root[m [36m/mnt/debs/[m
+sudo [36mmount[m [36m/dev/gddrxdos--vg/root[m [36m/mnt/debs/[m
+sudo [36mblkid[m [36m/dev/gddrxdos--vg/root[m
+sudo [36mlvdisplay[m
+sudo [36mvgdisplay[m
+sudo [36mfile[m [36m-s[m [36m/dev/mapper/backup_luks[m
+sudo [36mblkid[m [36m/dev/mapper/backup_luks[m
+sudo [36mcryptsetup[m [36mopen[m [36m/dev/loop0p3[m [36mbackup_luks[m
+sudo [36mcryptsetup[m [36mluksDump[m [36m/dev/loop0p3[m
+sudo [36mcryptsetup[m [36misLuks[m [36m/dev/loop0p3[m [96m&&[m echo [33m"loop0p3: LUKS"[m
+sudo [36mcryptsetup[m [36misLuks[m [36m/dev/loop3p2[m [96m&&[m echo [33m"loop0p3: LUKS"[m
+sudo [36mcryptsetup[m [36misLuks[m [36m/dev/loop3p2[m [96m&&[m echo [33m"loop3p3: LUKS"[m
+lsblk [36m/dev/loop0[m
+lsblk [36m/dev/loop3[m
+sudo [36mlosetup[m [36m-a[m
+losetup [36m-a[m
+sudo [36mlosetup[m [36m-fP[m [36m/mnt/d/image_deb/backup.img[m
+sudo [36mgdisk[m [36m-l[m [36m/mnt/d/image_deb/backup.img[m
+sudo [36mfdisk[m [36m-l[m [36m/mnt/d/image_deb/backup.img[m
+ls [36m/mnt/d/image_deb/[m
+sudo [36mmkdir[m [36m/mnt/debs[m
+cd [36mbin/zen/[m
+chmod [36m+x[m [36m./zen[m
+sudo [36mzypper[m [36min[m [36mchromium[m
+sudo [36mzypper[m [36min[m [36mvivaldi[m
+sudo [36mzypper[m [36min[m [36mvyvaldi[m
+sudo [36mzypper[m [36min[m [36mvivaldy[m
+sudo [36mzypper[m [36min[m [36mopera[m
+sudo [36mzypper[m [36min[m [36mthunderbird[m
+/home/gddrx/bin/telegram/Telegram [36m-workdir[m [36m/home/gddrx/bin/ppdd/tgs_sec/[m [36m--[m [36m%U[m
+/home/gddrx/bin/telegram/Telegram [36m-workdir[m [36m/home/gddrx/bin/ppdd/tgs_main/[m [36m--[m [36m%U[m
+/home/gddrx/bin/zen/zen [36m%U[m
+chmod [36m+x[m [36m./Telegram[m
+cd [96m~[36m/bin/telegram/[m
+sudo [36m./VMware-Workstation-Full-25H2-24995812.x86_64.bundle[m
+chmod [36m+x[m [36mVMware-Workstation-Full-25H2-24995812.x86_64.bundle[m
+sudo [36mzypper[m [36min[m [36mdiscord[m
+opi [36mcodecs[m
+sudo [36mzypper[m [36min[m [36mopi[m
+steam
+sudo [36mzypper[m [36min[m [36mviber[m
+sudo [36mzypper[m [36min[m [36msteam[m
+sudo [36mzypper[m [36min[m [36mmc[m [36mhtop[m [36mtmux[m
+sudo [36mzypper[m [36minstall[m [36mgcc[m [36mmake[m [36mkernel-default-devel[m [36mkernel-default-devel-extra[m [36mkernel-default-headers[m
+sudo [36mzypper[m [36minstall[m [36mgcc[m [36mmake[m [36mkernel-source[m
+sudo [36mzypper[m [36minstall[m [36mgcc[m [36mmake[m [36mkernel-desktop-devel[m [36mkernel-devel[m
+sudo [36mln[m [36m-s[m [36m/usr/lib64/libcrypto.so.3[m [36m/usr/lib64/libcrypto.so.1.1[m
+sudo [36maa-status[m
+mount [32m|[m grep [36musr[m
+ls [36m-l[m [36m/usr/lib/vmware/bin/[m
+mount [32m|[m grep [33m' /usr '[m
+ls [36m-l[m [36m/usr/lib/vmware/bin/vmware-setup-helper[m
+ls [36m-l[m [36m/usr/lib64/libxml2.so.2[m
+sudo [36mln[m [36m-s[m [36m/usr/lib64/libxml2.so.16.0.5[m [36m/usr/lib64/libxml2.so.2[m
+whereis [36mlibxml2.so.2.12.5[m
+witch [36mlibxml2.so.2.12.5[m
+sudo [36mzypper[m [36minstall[m [36mlibxml2[m
+rpm [36m-ql[m [36mlibxml2[m [32m|[m grep [36mlibxml2.so[m
+sudo [36mzypper[m [36minstall[m [36m./google-chrome-stable_current_x86_64.rpm[m
+rm [36mgoogle-chrome-stable_current_amd64.deb[m
+sudo [36mzypper[m [36minstall[m [36m./google-chrome-stable_current_amd64.deb[m

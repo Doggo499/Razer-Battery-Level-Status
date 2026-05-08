@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "didekridek@gmail.com",
+                "Name": "gddrx"
+            }
+        ],
+        "Category": "Hardware",
+        "Description": "Shows Razer Mouse battery level via OpenRazer module",
+        "Icon": "battery",
+        "Id": "org.kde.plasma.razerviperul",
+        "License": "MIT",
+        "Name": "Razer Mouse battery level status",
+        "Version": "1.0",
+        "Website": "https://github.com/gddrx/Razer-Battery-Level-Status"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
