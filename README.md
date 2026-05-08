@@ -6,6 +6,8 @@
 
 The widget displays the mouse’s battery percentage as well as its charging status.
 
+The polling of values occurs every 60 seconds or manually via the “Refresh” button.
+
 Tested on openSuSE Tumbleweed + KDE 6.6.4
 
 ## Install
