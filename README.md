@@ -1,5 +1,9 @@
 # Razer Battery Level Status Widget [Plasmoid] for KDE 6
 
+![IconStatus](./screenshot_00.png)
+
+![IconStatusDetailed](./screenshot_01.png)
+
 The widget displays the mouse’s battery percentage as well as its charging status.
 
 Tested on openSuSE Tumbleweed + KDE 6.6.4
