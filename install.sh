@@ -1,6 +1,7 @@
 #!/bin/bash
 # Installation of Razer Viper Ultimate Battery Plasmoid
 # openSUSE Tumbleweed
+set -u
 
 PLASMOID_ID="org.kde.plasma.razerviperul"
 INSTALL_DIR="$HOME/.local/share/plasma/plasmoids/$PLASMOID_ID"
@@ -51,7 +52,7 @@ else
 fi
 
 # groups plugdev
-if groups | grep -q plugdev; then
+if [[ " $(id -nG "$USER") " == *" plugdev "* ]]; then
     echo "  ✓ user found in plugdev"
 else
     echo "  ✗ user not found in plugdev"
@@ -78,9 +79,22 @@ fi
 # ── Install ────────────────────────────────────────────────────
 
 echo "[2/3] Plasmoid installation..."
-rm -rf "$INSTALL_DIR"
+if [[ -z "$INSTALL_DIR" || "$INSTALL_DIR" == "/" ]]; then
+    echo "  ✗ Refusing to remove invalid install path: '$INSTALL_DIR'"
+    exit 1
+fi
+
+EXPECTED_PREFIX="$HOME/.local/share/plasma/plasmoids/"
+if [[ "$INSTALL_DIR" != "$EXPECTED_PREFIX"* ]]; then
+    echo "  ✗ Refusing to remove unexpected install path: '$INSTALL_DIR'"
+    exit 1
+fi
+
+if [[ -d "$INSTALL_DIR" ]]; then
+    rm -rf -- "$INSTALL_DIR"
+fi
 mkdir -p "$INSTALL_DIR"
-cp -r package/* "$INSTALL_DIR/"
+cp -r package/. "$INSTALL_DIR/"
 echo "  ✓ Copied to $INSTALL_DIR"
 echo ""
 

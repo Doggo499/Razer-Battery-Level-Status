@@ -6,7 +6,9 @@
 
 The widget displays the mouse’s battery percentage as well as its charging status.
 
-The polling of values occurs every 60 seconds or manually via the “Refresh” button.
+For multi-device setups, use the **Device hint** field in the widget UI so it picks a specific `charge_level` path containing that text. The value is saved and restored automatically.
+The widget caches the active device path and automatically re-detects it if the mouse reconnects and the sysfs path changes.
+Polling is adaptive: faster while charging, slower on battery, and fast retry when device path is unavailable.
 
 Tested on openSuSE Tumbleweed + KDE 6.6.4
 
@@ -29,4 +31,4 @@ After resolving the dependencies and installing the widget, simply add it to the
 ## Notes
 
 The widget was tested with the **Razer Viper Ultimate** mouse.
-If you have many devices, the script will likely require refinement and modification.
+If you have many devices, open the widget and enter a stable identifier (for example USB ID fragment) in **Device hint**.
