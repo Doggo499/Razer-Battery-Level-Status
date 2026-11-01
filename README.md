@@ -10,7 +10,7 @@ For multi-device setups, use the **Device hint** field in the widget UI so it pi
 The widget caches the active device path and automatically re-detects it if the mouse reconnects and the sysfs path changes.
 Polling is adaptive: faster while charging, slower on battery, and fast retry when device path is unavailable.
 
-Tested on openSuSE Tumbleweed + KDE 6.6.4
+Tested on openSuSE Tumbleweed + KDE 6.6.4 and CachyOS + KDE 6.8.2
 
 ## Install
 
